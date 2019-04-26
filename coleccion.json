@@ -1,0 +1,286 @@
+[
+    {
+        "_id": 1,
+        "nombre": "sunset tee",
+        "precio": 34.99,
+        "descripcion": "The Sunset Tee features a glimpse of a mountain landscape in a retro feel, with the Tomorrowland Icon acting as a setting sun behind the snowy peaks. And so we've come to an end of another magical day, but have no fear, because dawn is just around the corner.",
+        "categoria": "t-shirts",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"],
+        "tamano": ["s","m","l","xl","xxl"],
+        "opciones": [
+            {
+                "nombre": "rojo",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            },
+
+            {
+                "nombre": "blanco",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            }
+            
+        ]
+    },
+
+    {
+        "_id": 2,
+        "nombre": "skecth tee",
+        "precio": 34.99,
+        "descripcion": "The artistic drawing on the Sketch Tee shows the creation of the Tomorrowland Icon in its purest form. It exposes the way the icon is built up, with all the values attached to it. The butterfly has a positive association and symbolizes freedom and the beauty of nature. The crown reminds us that we are one world in which we are equal. The eye inspires us to keep an eye out for each other and see the beauty of life even though our sight is sometimes blurred by all the problems we face every day. This comfy t-shirt with regular fit is ideal for spreading the love on a daily base. Live Today, Love Tomorrow, Unite Forever.",
+        "categoria": "t-shirts",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black","white"],
+        "tamano": ["s","m","l","xl","xxl"],
+        "opciones": [
+            {
+                "nombre": "rojo",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            },
+
+            {
+                "nombre": "blanco",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            }
+            
+        ]
+    },
+
+    {
+        "_id": 3,
+        "nombre": "phantom tee",
+        "precio": 34.99,
+        "descripcion": "Attention to details, craftsmanship and authenticity have always been iconic elements of Tomorrowland. These are now embodied in the Phantom Tee that keeps a hint of mystery at first sight. Once you take a closer look, you notice that some lines are thicker than others, revealing the Tomorrowland Icon logo like an optical illusion. This comfortable T-shirt with clean monochrome 3D rubber print is already an icon for everyday use. Never reveal your true magic...",
+        "categoria": "t-shirts",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"],
+        "tamano": ["s","m","l","xl","xxl"],
+        "opciones": [
+            {
+                "nombre": "rojo",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            },
+
+            {
+                "nombre": "blanco",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            }
+            
+        ]
+    },
+
+    {
+        "_id": 4,
+        "nombre": "bright night tee",
+        "precio": 34.99,
+        "descripcion": "When darkness falls over Tomorrowland and the sky is filled with stars, that's when the true magic begins. Let exploding fireworks and bright lights take you back to these moments with the Bright Night Tee. This t-shirt with regular fit has a satin Tomorrowland Icon print, which gives it a shiny look, perfect to illustrate the sparkling fireworks of the Tomorrowland Mainstage. The rough finishing on the neckline gives the Bright Night Tee a bold look to tackle all your goals. Escape reality and write your own chapter in a new and magnificent tale.",
+        "categoria": "t-shirts",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["red"],
+        "tamano": ["s","m","l","xl","xxl"],
+        "opciones": [
+            {
+                "nombre": "rojo",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            },
+
+            {
+                "nombre": "blanco",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            }
+            
+        ]
+    },
+
+    {
+        "_id": 5,
+        "nombre": "imprint tee",
+        "precio": 34.99,
+        "descripcion": "Stand out with the Imprint Tee Grey as the soft fabric features a unique embossed Tomorrowland lettering. This T-shirt also has a TML quality label attached on the bottom left. Immortality is all about people remembering you and the things you have accomplished, so leave your mark with the Imprint Tee.",
+        "categoria": "t-shirts",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["red"],
+        "tamano": ["s","m","l","xl","xxl"],
+        "opciones": [
+            {
+                "nombre": "rojo",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            },
+
+            {
+                "nombre": "blanco",
+                "imagenes": ["imagen1.jpg", "imagen2.jpg"]
+            }
+            
+        ]
+    },
+
+    {
+        "_id": 6,
+        "nombre": "winter hat",
+        "precio": 39.99,
+        "descripcion": "The Winter Hat is designed for extreme cold temperatures and harsh conditions, thanks to the quilted lining and faux-fur on the earflaps. Fasten the flaps around your head with the leather strap and metal clasp with Tomorrowland icon to keep everything nice and snug during blizzards or freezing temperatures. A round black leather patch with Tomorrowland Icon embossing on the back acts as a token to share warm memories with others.",
+        "categoria": "headwear",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"]
+
+    },
+
+    {
+        "_id": 7,
+        "nombre": "moon mist beanie",
+        "precio": 39.99,
+        "descripcion": "The Moon Mist Beanie is made for the People of Tomorrow that pursue an active lifestyle and aren't afraid to explore even the most coldest of regions. The white neps on the black fabric mix represent stars in a dark, cold night, but the Moon Mist Beanie is guaranteed to keep you warm. A black embroidered label shows the white Tomorrowland lettering on this clean and soft beanie.",
+        "categoria": "headwear",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"]
+
+    },
+
+    {
+        "_id": 8,
+        "nombre": "lotus emblem cap",
+        "precio": 39.99,
+        "descripcion": "There is a myth about an uncommon flower, carrying the true essence of Winter. Once this lotus blossoms, it releases thousands of frozen crystals. The Frozen Lotus reveals the magic of the Tomorrowland icon on the Lotus Emblem Cap with its high quality gold yarn embroidery. The black cotton profile with flat visor front makes this cap stand out from the crowd, while the fully adjustable black plastic snapback always ensures a perfect fit.",
+        "categoria": "headwear",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"]
+
+    },
+
+    {
+        "_id": 9,
+        "nombre": "cherish cap",
+        "precio": 24.99,
+        "descripcion": "Although the Cherish cap is inspired by nature, this piece of headwear has roots that grow deep into the city. The rose, a symbol of Love, will make your toddler think of beautiful moments that are yet to come. The red visor and button oare cherry on top, as it will remind your kid that there's love and warmth in every reach. To top it off, your little miracle will discover garment tapes with logo icons, 'Tomorrowland', 'Live Today', 'Love Tomorrow', and 'Unite Forever' lettering on the inside that gives him/her positive inspiration all day long. Let love guide you and take it forward onto the next generation.",
+        "categoria": "headwear",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"]
+
+    },
+
+    {
+        "_id": 10,
+        "nombre": "icon suede cap",
+        "precio": 24.99,
+        "descripcion": "The Icon Suede Cap is a Premium cap that embodies the desire of free spirits to escape reality through Music. The Tomorrowland Icon Logo embroidery with suede flat visor makes this cap stand out from the crowd, while the fully adjustable black plastic snapback ensures a perfect fit.",
+        "categoria": "headwear",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["gray"]
+
+    },
+
+    {
+        "_id": 11,
+        "nombre": "frozen hoodie",
+        "precio": 74.99,
+        "descripcion": "The Icon Suede Cap is a Premium cap that embodies the desire of free spirits to escape reality through Music. The Tomorrowland Icon Logo embroidery with suede flat visor makes this cap stand out from the crowd, while the fully adjustable black plastic snapback ensures a perfect fit.",
+        "categoria": "sweaters",
+        "genero": ["male", "female"],
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["blue"]
+
+    },
+
+    {
+        "_id": 12,
+        "nombre": "graphic icon hoodie",
+        "precio": 74.99,
+        "descripcion": "Enter a world where different geometrical shapes all work together as one to create the Graphic Icon Hoodie. This dimension eventually forms the bigger picture: the magnificent Tomorrowland Icon, because together, we can achieve so much more. This cosy sweater is ideal for cool summer nights, and the large hood shelters you from the harsh elements of winter. Along with its ribs around the sleeves and the neck, this hoodie ensures the perfect fit that respects the freedom of movement and comfort. All individual elements that come together to create the bigger picture is nothing less than creating harmony.",
+        "categoria": "sweaters",
+        "genero": ["male", "female"],
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["blue"]
+
+    },
+
+    {
+        "_id": 13,
+        "nombre": "avalanche sweater hoodie",
+        "precio": 74.99,
+        "descripcion": "For the untrained eye, the Avalanche sweater displays the Tomorrowland Icon in a high-quality embroidery. However, if you take a closer look, it reveals a beautiful horizon of a Winter landscape. Sunshine, mountain pastures, gems, it's all there but hidden from plain sight. The eye gazes at a magical scenery, hidden in a network of fibres.",
+        "categoria": "sweaters",
+        "genero": ["male", "female"],
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["gray"]
+
+    },
+
+    {
+        "_id": 14,
+        "nombre": "block hoodie",
+        "precio": 69.99,
+        "descripcion": "The bold rectangular screen print combined with a nice Tomorrowland lettering makes the Block Hoodie your new favourite! This hooded sweatshirt is perfect for cool summerdays and ideal for everyday use as it is has a soft & warm fabric. The lettering of Tomorrowland is placed on the outside of the box, as the people of Tomorrowland are known to be ambitious, determined, commited and outside the box-thinkers. ",
+        "categoria": "sweaters",
+        "genero": ["male", "female"],
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"]
+
+    },
+
+    {
+        "_id": 15,
+        "nombre": "tomorrowland sweater",
+        "precio": 69.99,
+        "descripcion": "This comfortable sweater features a black rugged fabric with white nips that look like stars in the night. The real eyecatcher however is the white Tomorrowland velours stitching across the chest that reminds you of good times and beautiful memories. Live your own story.",
+        "categoria": "sweaters",
+        "genero": ["male", "female"],
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"]
+
+    },
+
+    {
+        "_id": 16,
+        "nombre": "live love unite bracelet",
+        "precio": 69.99,
+        "descripcion": "Amazing memories with friends from all over the world come alive again with the Live Love Unite Bracelet. The silver engraved components are the biggest highlight of this bracelet, as you will carry the key values of Tomorrowland with you, every day of the year.",
+        "categoria": "jewelry",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["black"]
+
+    },
+
+    {
+        "_id": 17,
+        "nombre": "iconic leather bracelet",
+        "precio": 69.99,
+        "descripcion": "The Iconic Leather Bracelet gives you a rugged and bold look, but still expressing a positive vibe and your love towards Tomorrowland. The centrepiece of this bracelet is the Tomorrowland icon, which will capture all of your shared memories with loved ones and it will make you want to revive all these moments. Be an icon, be you.",
+        "categoria": "jewelry",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["brown", "black"]
+
+    },
+
+    {
+        "_id": 18,
+        "nombre": "premiun icon necklace",
+        "precio": 2.995,
+        "descripcion": "Made in 18K solid Gold, this precious Tomorrowland jewel is a unique collectors’ item. When you place your order, your one-of-a-kind necklace with Tomorrowland Icon Pendant is handmade from 18K solid Gold in Boom, Belgium. That's why this product is non-returnable after you place your order. Only 10 will be made and a unique certificate guarantees you this is an authentic Tomorrowland piece.",
+        "categoria": "jewelry",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["brown"]
+
+    },
+
+    {
+        "_id": 19,
+        "nombre": "blossom necklace",
+        "precio": 2.995,
+        "descripcion": "There are only a few plants and flowers that blossom even when covered by a thick carpet of snow, but somehow, they can manage to overcome this frosty obstacle and sprout to become a thing of beauty. The Blossom Necklace is an homage to overcoming obstacles and branches out of the Tomorrowland Icon logo to radiate its beauty onto you. It has 3 small white diamonds that look like snowflakes on the leaves, and a Tomorrowland Icon pendant on the clasp closure completes this tribute to overcoming obstacles and keeping a positive perspective on life.",
+        "categoria": "jewelry",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["brown"]
+
+    },
+
+    {
+        "_id": 20,
+        "nombre": "blossom ring",
+        "precio": 2.995,
+        "descripcion": "There are only a few plants and flowers that blossom even when covered by a thick carpet of snow, but somehow, they can manage to overcome this frosty obstacle and sprout to become a thing of beauty. The Blossom Bracelet is an homage to overcoming obstacles and branches around your finger to radiate its beauty onto you. It has 1 small white diamond and 1 bigger London Blue Topaz that look like snowflakes on the leaves.",
+        "categoria": "jewelry",
+        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "colores": ["brown"]
+
+    }
+]
