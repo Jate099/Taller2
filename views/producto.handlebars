@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +18,35 @@
         </section>
 
         <section class="app__contenido">
-            
+            <section class="preview">
+                <img class="preview__principal" src="{{imgPrincipal}}" alt="">
+                <div class="preview__miniaturas">
+                    <img class="preview__miniatura" src="{{miniatura1}}" alt="">
+                    <img class="preview__miniatura" src="{{miniatura2}}" alt="">
+                    <img class="preview__miniatura" src="{{miniatura3}}" alt="">
+                    <img class="preview__miniatura" src="{{miniatura4}}" alt="">
+                </div>
+            </section>
+
+            <section class="app__info">
+                <section class="encabezado">
+                    <h1 class="encabezado__titulo">{{titulo}}</h1>
+                    <p class="encabezado__precio">${{precio}}</p>
+                </section>
+
+                <section class="app__config">
+                    <div class="opciones"></div>
+                </section>
+
+                <p>{{descrip}}</p>
+            </section>
+
+            <section class="app__recomendados">
+
+            </section>
+
         </section>
     </div>
 </body>
+
 </html>
