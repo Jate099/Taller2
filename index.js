@@ -27,7 +27,7 @@ app.get('/', function (req, response) {
 });
 
 app.get('/tienda', function (req, response) {
-  response.sendFile(__dirname + '/public/tienda.html');
+  response.render('tienda');
 });
 
 app.get('/tienda/:producto', function (request, response) {
