@@ -1,3 +1,6 @@
 node_modules
 public/styles/style.css
 public/styles/style.css.map
+
+public/styles/main.css
+public/styles/main.css.map

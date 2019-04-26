@@ -1,5 +1,3 @@
-function cargarPagina() {
-
     var express = require('express');
     var renderEngine = require('express-handlebars');
     var app = express();
@@ -8,5 +6,12 @@ function cargarPagina() {
     app.set('view engine', 'handlebars');
     app.engine('handlebars', renderEngine());
 
-}
-window.addEventListener('load', cargarPagina);
+    app.get('/', function (req, response) {
+        response.sendFile(__dirname + '/public/landing.html');
+      });
+
+
+      app.listen(3000, function () {
+        console.log('Aplicación ejemplo, escuchando el puerto 3000!');
+      });
+
