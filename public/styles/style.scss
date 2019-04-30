@@ -1,8 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    height: 100%;
+    max-width: 100%;
+    background-color: white;
+    font-family: 'Oxygen', sans-serif;
+}
+
 .app{
     height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Oxygen', sans-serif;
+
+    &__banner{
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__full-Screen-Banner-Wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &__full-Screen-Video-Wrap img{
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    &__img-overlay{
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        z-index: 1;
+        opacity: 0.40;
+    }
 
     &__header{
         margin: 0;
@@ -12,7 +54,6 @@
         margin-bottom: 8%;
         padding: 0.5% 5%;
         z-index: 3;
-        background-color: black;
         backdrop-filter: blur(100px)
         sarurate(180%);
     }
@@ -46,8 +87,747 @@
         color: white;
         text-decoration: none;
     }
-}
 
-h1{
-    color: red;
+    .boton-modal{
+        background: none;
+        border: none;
+    }
+
+    &__link-logo{
+        font-size: 100%;
+        margin-left: 5px;
+        color: white;
+        text-decoration: none;
+    }
+
+    &__link:hover{
+        color: rgb(230, 45, 116);
+    }
+
+    .modal{
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 4; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+        &__img-modal{
+            background-image: url(/imagenes/modal.jpg);
+            width: 558px;
+            height: 30%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__contenido{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: #fefefe;
+            position: relative;
+            border-radius: 15px;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 600px; /* Could be more or less, depending on screen size */
+            height: 500px; /* Could be more or less, depending on screen size */
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            z-index: 1;
+        }
+
+        &__titulo{
+            margin: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        &__descrip{
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        &__sustancia{
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &__input{
+            margin-bottom: 15px;
+            border-radius: 5px;
+            &:first-child{
+                margin-top: 15px;
+            }
+        }
+
+        @keyframes animatetop {
+            from {top: -300px; opacity: 0}
+            to {top: 0; opacity: 1}
+          }
+
+          &__close{
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        &__close:hover, &__close:focus{
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    &__video{
+        //background-size: cover;
+        //background-repeat: no-repeat;
+        //background-position: center;
+        flex: 1 1 1080px;
+        height: 100vh;
+        //height: 973px;
+    }
+
+    &__promo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        //align-items: center;
+        margin: 0 5%;
+        margin-top: 150px;
+        //padding: 1%;
+        height: 65%;
+        z-index: 2;
+    }
+
+    &__titulo1, &__titulo2{
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        margin: 0;
+        margin-bottom: 15px;
+        padding: 0;
+        transition: 0.4s;
+    }
+
+    &__titulo1{
+        font-size: 40px
+    }
+
+    &__titulo2{
+        margin-bottom: 50px;
+        font-size: 70px
+    }
+
+    &__contendor-boton{
+        font-size: 20px;
+        color: white;
+        background-color: #37AB4A;
+        width: 150px;
+        height: 60px;
+        border: none;
+        border-radius: 50px;
+    }
+
+    &__boton{
+        text-decoration: none;
+    }
+
+    &__contendor-boton:hover{
+        background-color: white;
+        color: #37AB4A;
+    }
+
+    &__body{
+        margin: 0;
+        //padding: 1%;
+    }
+
+    .anuncio{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        //align-content: center;
+        flex-basis: 100%;
+        height: 100%;
+        align-items: center;
+        padding: 1% 5%;
+
+        &__package{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            //height: 100%;
+            //align-items: center;
+            //width: 570px;
+            margin: 10px 15px;
+            opacity: 100;
+        }
+
+        &__titulo-contenedor{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__titulo-pack{
+            font-size: 20px;
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    
+        &__imgPack{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 350px;
+            transition: all 0.4s;
+        }
+    
+        &__lugar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+    
+        #separador{
+            width: 80%;
+        }
+    
+        &__descripPack{
+            display: flex;
+            flex-direction: column;
+            //box-sizing: content-box;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 0;
+            background-color: white;
+            padding-bottom: 30px;
+            height: 300px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4),0 6px 20px 0 rgba(0,0,0,0.19);
+            transition: all 0.4s;
+        }
+
+        &__info{
+            margin: 5px 0;
+            font-size: 20px;
+        }
+    
+        &__package-boton{
+            margin-top: 15px;
+            text-decoration: none;
+        }
+    
+        &__pack-boton-cont{
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border: white;
+            font-size: 20px;
+            color: white;
+            background-image: linear-gradient(to bottom right, blue, rgb(114, 175, 245));
+            width: 200px;
+            height: 60px;
+            border-radius: 50px;
+            transition: all 0.4s;
+        }
+
+        &__pack-boton-cont-amarillo{
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border: white;
+            font-size: 20px;
+            color: white;
+            background-image: linear-gradient(to bottom right, #FF931E, rgb(255, 203, 30));
+            width: 200px;
+            height: 60px;
+            border-radius: 50px;
+            transition: all 0.4s;
+        }
+
+        &__pack-boton-cont:hover{
+            background-color: white;
+            background-image: none;
+            color: blue;
+            width: 210px;
+            height: 65px;
+        }
+
+        &__pack-boton-cont-amarillo:hover{
+            background-color: white;
+            background-image: none;
+            color:  #FF931E;
+            width: 210px;
+            height: 65px;
+        }
+
+        &__titulo-pack{
+            font-size: 25px;
+        }
+    
+    }
+
+    &__parallax{
+        background-image: url(/imagenes/fondoMartin3.jpg);
+        background-color: white;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .titulo{
+        width: 60%;
+        height: 150px;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: #B6215B;
+        transition:all .4s;
+    }
+
+    .tickets{
+        flex-shrink: 1;
+        width: 100%;
+        height: 950px;
+        background-image: url(/imagenes/tickets-13.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 5%;
+        padding-top: 3%;
+
+        &__Btn{
+            font-size: 25px;
+            color: white;
+            background: none;
+            border: none;
+            transition: all 0.4s;
+    }
+
+    &__Btn:hover{
+        color: #B6215B;
+    }
+
+    &__Btn:visited{
+        color: #B6215B;
+    }
+
+    &__descrip{
+        margin-top: 6%;
+        margin-bottom: 5%;
+        margin-right: 5%;
+        font-size: 20px;
+    }
+
+        &__fecha{
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        &__ticket-info{
+            display: flex;
+            //padding: 0 5%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            flex-shrink: 1;
+            height: 100px;
+            border-style: solid;
+            border-color: white;
+            margin-bottom: 25px;
+            border-radius: 20px;
+    }
+
+    &__btn-compra{
+        font-size: 25px;
+        background: none;
+        color: white;
+        height: 93px;
+        width: 30%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: none;
+        border-left: solid white;
+        transition: all 0.4s;
+        cursor: pointer;
+    }
+
+    &__btn-compra:hover {
+        background-color: #37AB4A;
+    }
+
+    &__titulo{
+        font-size: 25px;
+        margin-left: 5%;
+    }
+   
+    }
+
+    .artistas{
+        width: 100%;
+        height: 150px;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //margin-top: 1em;
+        color: white;
+        background-color: #F2B630;
+    }
+
+    .slider{
+        //margin-top: 50px;
+
+        &__banner{
+            width: 100%;
+            height: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /*&__info{
+            color: white;
+            width: 50%;
+            height: 20%;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: flex-end;
+            transition: all 0.4s;
+        }*/
+
+        &__miniaturas{
+            height: 788px;
+            //flex-basis: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            transition: all 0.4s;
+        }
+
+        &__contenedor{
+            height: 788px;
+            width: 8%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-end;
+            transition: all 0.4s;
+        }
+
+        &__miniaturas:hover{
+            opacity: 100;
+        }
+
+        &__contenedor:hover{
+            background-color: rgba(26, 26, 26, 0.507);
+        }
+
+        &__btn-img{
+            width: 100%;
+            height: auto;
+            border: none;
+            background: none;
+            transition: all 0.4s;
+        }
+
+        &__btn-img:hover{
+            height: 161px;
+            width: 134px;
+        }
+    }
+
+    .footer{
+        margin-top: 150px;
+        display: flex;
+        flex-direction: row;
+        height: 10%;
+        background-color: #B6215B;
+        color: white;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 5%;
+
+        &__redes{
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__logo{
+            max-width: 69;
+            height: 74;
+        }
+
+        &__logo-redes{
+            margin-right: 5px;
+        }
+
+        &__seguir{
+            margin: 0;
+            margin-right: 10px;
+        }
+    }
+
+    /*.interaccion{
+
+        &__img-comp{
+            position: absolute;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        &__img-comp-img img {
+            display: block;
+            vertical-align: middle;
+          }
+          
+    }*/
+
+    @media (max-width: 1033px) {
+        .app{
+            &__nav{
+                margin-left: .1em; 
+            }
+
+            &__link-logo{
+                font-size: 75%;
+            }
+
+            &__link{
+                font-size: 70%;
+            }
+
+        }
+
+        .anuncio{
+
+            &__imgPack{
+                height: 300px;
+            }
+        }
+
+        .titulo{
+            height: 100px;
+            font-size: 40px;
+        }
+
+        .artistas{
+            height: 100px;
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 891px){
+        .app{
+            &__titulo1{
+                font-size: 30px;
+            }
+
+            &__titulo2{
+                font-size: 50px;
+            }
+        }
+
+        .anuncio{
+            &__imgPack{
+                height: 180px;
+            }
+
+            &__titulo-pack{
+                font-size: 18px;
+            }
+
+            &__descripPack{
+                box-sizing: none;
+                height: 240px;
+            }
+
+            &__info{
+                font-size: 15px;
+            }
+        }
+
+        .titulo{
+            height: 100px;
+            font-size: 30px;
+        }
+
+        .artistas{
+            height: 100px;
+            font-size: 30px;
+        }
+        
+    }
+
+    @media (max-width: 635px){
+        .app{
+            &__titulo1{
+                font-size: 25px;
+            }
+
+            &__titulo2{
+                font-size: 45px;
+            }
+        }
+
+        .footer{
+
+            &__legal, &__seguir{
+                font-size: 10px;
+            }
+
+        }
+        
+    }
+
+    @media (max-width: 590px) {
+        .anuncio{
+            &__titulo-pack{
+                font-size: 15px;
+            }
+        }
+
+        .titulo{
+            height: 90px;
+            font-size: 25px;
+        }
+
+        .aristas{
+            height: 90px;
+            font-size: 25px;
+        }
+
+        .footer{
+
+            &__legal, &__seguir{
+                font-size: 10px;
+            }
+
+        }
+
+        .modal{
+
+            &__contenido{
+                width: 400px;
+            }
+
+            &__img-modal{
+                width: 358px;
+            }
+        }
+
+    }
+
+    @media ( max-width: 569px){
+        .app{
+            &__nav{
+                margin-left: .01em; 
+            }
+
+            &__link-logo{
+                font-size: 65%;
+            }
+
+            &__link{
+                font-size: 60%;
+            }
+
+        }
+
+        .anuncio{
+            flex-direction: column;
+
+            &__titulo-pack{
+                font-size: 10px;
+            }
+
+            &__info{
+                font-size: 10px;
+            }
+
+            &__descripPack{
+                width: 100%;
+                height: 200px;
+            }
+
+            &__imgPack{
+                width: 100%;
+                height: 150px;
+            }
+
+            &__pack-boton-cont, &__pack-boton-cont-amarillo{
+                font-size: 10px;
+                width: 100px;
+                height: 50px;
+            }
+
+        }
+
+        .tickets{
+            &__Btn{
+                font-size: 20px;
+            }
+        }
+
+        .slider{
+            &__banner{
+                width: 569px;
+            }
+            
+        }
+
+        .footer{
+
+            &__legal, &__seguir{
+                font-size: 10px;
+            }
+
+            &__logo{
+                width: 59;
+                height: 64;
+            }
+
+        }
+
+    }
+
 }
