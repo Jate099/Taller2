@@ -13,7 +13,24 @@
 </head>
 
 <body>
-     <div class="app">
+    <div class="app">
+        
+        <ul>
+            {{#each productos}}
+            <li>
+                <h2>{{nombre}}</h2>
+                <img src="{{imagenes.[0]}}" alt="">
+                <p>{{categoria}}</p>
+                <p>{{precio}}</p>
+            </li>
+            {{/each}}
+        </ul>
+
+        <ul>
+            <li><a href="/tienda/headwear">headwear</a></li>
+            <li><a href="/tienda/sweaters">sweaters</a></li>
+            <li><a href="/tienda/jewelry">jewelry</a></li>
+        </ul>
 
         <section class="app__banner app__container">
             <div class="app__full-Screen-Banner-Wrap">
@@ -221,7 +238,7 @@
             </section>
 
             <section class="slider">
-                <div class="slider__banner">   
+                <div class="slider__banner">
                     <div class="slider__miniaturas">
                         <div class="slider__contenedor">
                             <img class="slider__btn-img" src="/imagenes/imgboton-14.jpg" alt="">
@@ -234,7 +251,7 @@
                 </div>
 
             </section>
-            
+
         </section>
 
         <footer class="footer">

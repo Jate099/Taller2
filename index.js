@@ -8,13 +8,15 @@ const url = 'mongodb://localhost:27017';
 const dbName = 'tienda';
 const client = new MongoClient(url);
 
+var db = null;
+
 client.connect(function(err) {
   assert.equal(null, err);
   console.log("Connected successfully to server");
 
-  const db = client.db(dbName);
+  db = client.db(dbName);
 
-  const productos = db.collection('productos');
+  /*const productos = db.collection('productos');
   productos.find({}, {sort: ['precio']}).toArray(function(err, docs){
 
     assert.equal(err, null);
@@ -24,9 +26,9 @@ client.connect(function(err) {
     docs.forEach(function(prod){
       console.log(prod.precio);
     });
-  });
+  });*/
 
-  client.close();
+  //client.close();
 });
 
 app.use(express.static('public'));
@@ -53,7 +55,46 @@ app.get('/', function (req, response) {
 });
 
 app.get('/tienda', function (req, response) {
-  response.render('tienda');
+
+  const productos = db.collection('productos');
+  productos.find({}, {sort: ['precio']}).toArray(function(err, docs){
+    assert.equal(err, null);
+
+    var contexto = {
+      productos: docs
+    };
+
+    response.render('tienda', contexto);
+    
+  });
+
+});
+
+app.get('/tienda/:categoria?', function (request, response) {
+  
+  console.log(request.params.categoria);
+
+  var query = {};
+  if(request.params.categoria){
+    query.categoria = request.params.categoria
+  }
+  /*if(request.params.categoria){
+    query.precio = $lte: request.params.precio;
+  }*/
+
+  const productos = db.collection('productos');
+  productos.find(query).toArray(function(err, docs){
+    assert.equal(err, null);
+
+    var contexto = {
+      productos: docs
+    };
+
+    response.render('categoria', contexto);
+    
+  });
+
+
 });
 
 app.get('/tienda/:producto', function (request, response) {
