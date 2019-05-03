@@ -78,16 +78,17 @@ app.get('/tienda/:categoria?', function (request, response) {
   if(request.params.categoria){
     query.categoria = request.params.categoria
   }
-  /*if(request.params.categoria){
-    query.precio = $lte: request.params.precio;
-  }*/
+  if(request.params.categoria){
+    query.precio = {$lte: request.params.precio};
+  }
 
   const productos = db.collection('productos');
   productos.find(query).toArray(function(err, docs){
     assert.equal(err, null);
 
     var contexto = {
-      productos: docs
+      productos: docs,
+      precio: request.query.precio,
     };
 
     response.render('categoria', contexto);

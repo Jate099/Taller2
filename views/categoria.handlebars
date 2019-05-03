@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,36 @@
 </head>
 
 <body>
-     <ul>
-            <li><a href="/tienda/headwear">headwear</a></li>
-            <li><a href="/tienda/sweaters">sweaters</a></li>
-            <li><a href="/tienda/jewelry">jewelry</a></li>
-        </ul>
+    <ul>
+        <li><a href="/tienda/headwear">headwear</a></li>
+        <li><a href="/tienda/sweaters">sweaters</a></li>
+        <li><a href="/tienda/jewelry">jewelry</a></li>
+    </ul>
+
+    <h1>Filtrar precio</h1>
+    <label>Ingresa el rango de precio</label>
+    <input value="{{precio}}" class="input-rango" type="range" min="10000" max="30000">
 
     <ul>
-            {{#each productos}}
-            <li>
-                <h2>{{nombre}}</h2>
-                <img src="{{imagenes.[0]}}" alt="">
-                <p>{{categoria}}</p>
-                <p>{{precio}}</p>
-            </li>
-            {{/each}}
-        </ul>
-    
+        {{#each productos}}
+        <li>
+            <h2>{{nombre}}</h2>
+            <img src="{{imagenes.[0]}}" alt="">
+            <p>{{categoria}}</p>
+            <p>{{precio}}</p>
+        </li>
+        {{/each}}
+    </ul>
+
+    <script>
+        var rango = document.querySelector('.input-rango');
+        function buscarPorPrecio() {
+            console.log(rango.value);
+            location.href = '/tienda/categoria?precio=' + rango.value;
+        }
+        rango.addEventListener('change', buscarPorPrecio);
+    </script>
+
 </body>
+
 </html>
