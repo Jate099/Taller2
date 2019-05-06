@@ -6,38 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
-    <ul>
-        <li><a href="/tienda/headwear">headwear</a></li>
-        <li><a href="/tienda/sweaters">sweaters</a></li>
-        <li><a href="/tienda/jewelry">jewelry</a></li>
-    </ul>
+    <div class="categoria">
+        <section class="categoria__header">
+            <div class="categoria__nav">
+                <ul class="nav">
+                    <li class="item"><a class="links" href="/tienda/headwear">headwear</a></li>
+                    <li class="item"><a class="links" href="/tienda/sweaters">sweaters</a></li>
+                    <li class="item"><a class="links" href="/tienda/jewelry">jewelry</a></li>
+                </ul>
+            </div>
 
-    <h1>Filtrar precio</h1>
-    <label>Ingresa el rango de precio</label>
-    <input value="{{precio}}" class="input-rango" type="range" min="10000" max="30000">
+            {{#if esJewelry}}
+            <div class="categoria__banner" style="background-image: url(/imagenes/jewelry.jpg)">
+                <h1 class="categoria__titulo">{{categoria}}</h1>
+            </div>
+            {{/if}}
 
-    <ul>
-        {{#each productos}}
-        <li>
-            <h2>{{nombre}}</h2>
-            <img src="{{imagenes.[0]}}" alt="">
-            <p>{{categoria}}</p>
-            <p>{{precio}}</p>
-        </li>
-        {{/each}}
-    </ul>
+            {{#if esHeadwear}}
+            <div class="categoria__banner" style="background-image: url(/imagenes/headwear.jpg)">
+                <h1 class="categoria__titulo">{{categoria}}</h1>
+            </div>
+            {{/if}}
 
-    <script>
-        var rango = document.querySelector('.input-rango');
-        function buscarPorPrecio() {
-            console.log(rango.value);
-            location.href = '/tienda/categoria?precio=' + rango.value;
-        }
-        rango.addEventListener('change', buscarPorPrecio);
-    </script>
+            {{#if esSweaters}}
+            <div class="categoria__banner" style="background-image: url(/imagenes/jewelry.jpg)">
+                <h1 class="categoria__titulo">{{categoria}}</h1>
+            </div>
+            {{/if}}
+
+        </section>
+
+        <section class="categoria__contenido">
+
+            <div class="filtros">
+                {{#if esHeadwear}}
+                <h1>Filtrar precio</h1>
+                <label>Ingresa el rango de precio</label>
+                <input value="{{precio}}" class="input-rango" type="range" min="1000" max="5000">
+                {{/if}}
+            </div>
+
+            <div class="productos">
+
+                {{#each productos}}
+                <div class="producto">
+                    <img class="producto__img" src="{{imagenes.[0]}}" alt="">
+
+                    <div class="producto__info">
+                        <div class="producto__infoEsp">
+                            <h2 class="producto__nombre">{{nombre}}</h2>
+                            <p class="producto__precio">{{precio}}</p>
+                        </div>
+                        <div class="producto__likeBtn"></div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="/script/categoria.js"></script>
 
 </body>
 

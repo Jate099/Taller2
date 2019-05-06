@@ -16,18 +16,6 @@ client.connect(function(err) {
 
   db = client.db(dbName);
 
-  /*const productos = db.collection('productos');
-  productos.find({}, {sort: ['precio']}).toArray(function(err, docs){
-
-    assert.equal(err, null);
-    console.log("Found the following records");
-    console.log(docs.length);
-    
-    docs.forEach(function(prod){
-      console.log(prod.precio);
-    });
-  });*/
-
   //client.close();
 });
 
@@ -56,7 +44,7 @@ app.get('/', function (req, response) {
 
 app.get('/tienda', function (req, response) {
 
-  const productos = db.collection('productos');
+  var productos = db.collection('productos');
   productos.find({}, {sort: ['precio']}).toArray(function(err, docs){
     assert.equal(err, null);
 
@@ -73,28 +61,33 @@ app.get('/tienda', function (req, response) {
 app.get('/tienda/:categoria?', function (request, response) {
   
   console.log(request.params.categoria);
+  //console.log(request.query.precio);
 
   var query = {};
   if(request.params.categoria){
-    query.categoria = request.params.categoria
+    query.categoria = request.params.categoria;
   }
-  if(request.params.categoria){
-    query.precio = {$lte: request.params.precio};
-  }
+  if(request.query.precio){
+    query.precio = { $lte: request.query.precio };
+}
 
-  const productos = db.collection('productos');
+  var productos = db.collection('productos');
+
   productos.find(query).toArray(function(err, docs){
     assert.equal(err, null);
 
     var contexto = {
       productos: docs,
+      categoria: request.params.categoria,
       precio: request.query.precio,
+      esHeadwear: request.params.categoria == "headwear",
+      esSweaters: request.params.categoria == "sweaters",
+      esJewelry: request.params.categoria == "jewelry",
     };
 
     response.render('categoria', contexto);
     
   });
-
 
 });
 

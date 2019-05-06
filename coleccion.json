@@ -114,7 +114,7 @@
         "precio": 39.99,
         "descripcion": "The Winter Hat is designed for extreme cold temperatures and harsh conditions, thanks to the quilted lining and faux-fur on the earflaps. Fasten the flaps around your head with the leather strap and metal clasp with Tomorrowland icon to keep everything nice and snug during blizzards or freezing temperatures. A round black leather patch with Tomorrowland Icon embossing on the back acts as a token to share warm memories with others.",
         "categoria": "headwear",
-        "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
+        "imagenes": ["https://cdn.shopify.com/s/files/1/0921/8620/products/TML-Winter-Hat_1000x.jpg?v=1549293884", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
         "colores": ["black"]
 
     },
