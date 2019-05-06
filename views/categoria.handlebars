@@ -51,6 +51,11 @@
 
         </section>
 
+        <div class="cart">
+            <p>cart</p>
+            <p class="cart__cant">0</p>
+        </div>
+
         <div class="filtros">
             <div class="filtros__contenedor">
                 {{#if esHeadwear}}
@@ -70,11 +75,12 @@
 
                     <div class="producto__info">
                         <div class="producto__infoEsp">
-                            <a class="producto__nombre" href="/tienda/producto">{{nombre}}</a>
+                            <a class="producto__nombre" href="/tienda/producto/{{nombre}}">{{nombre}}</a>
                             <!--<p class="producto__nombre">{{nombre}}</p>-->
                             <p class="producto__precio">$ {{precio}}</p>
                         </div>
                         <div class="producto__likeBtn"></div>
+                        <button class="producto__carritoBtn">carrito</button>
                     </div>
                 </div>
                 {{/each}}

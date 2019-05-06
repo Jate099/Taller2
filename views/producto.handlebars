@@ -24,23 +24,29 @@
 
         <section class="producto__contenido">
             <section class="preview">
-                <img class="preview__principal" src="{{imagenes.[0]}}" alt="">
+                <img class="preview__principal" src="{{producto.imagenes.[0]}}" alt="">
                 <div class="preview__miniaturas">
-                    <img class="preview__miniatura" src="{{imagenes.[0]}}" alt="">
-                    <img class="preview__miniatura" src="{{imagenes.[1]}}" alt="">
-                    <img class="preview__miniatura" src="{{imagenes.[2]}}" alt="">
-                    <img class="preview__miniatura" src="{{imagenes.[3]}}" alt="">
+                    <img class="preview__miniatura" src="{{producto.imagenes.[0]}}" alt="">
+                    <img class="preview__miniatura" src="{{producto.imagenes.[1]}}" alt="">
+                    <img class="preview__miniatura" src="{{producto.imagenes.[2]}}" alt="">
+                    <img class="preview__miniatura" src="{{producto.imagenes.[3]}}" alt="">
                 </div>
             </section>
 
             <section class="producto__info">
                 <section class="encabezado">
-                    <h1 class="encabezado__titulo">{{nombre}}</h1>
-                    <p class="encabezado__precio">${{precio}}</p>
+                    <h1 class="encabezado__titulo">{{producto.nombre}}</h1>
+                    <p class="encabezado__precio">${{producto.precio}}</p>
                 </section>
 
                 <section class="producto__config">
-                    <div class="opciones"></div>
+                    <div class="opciones">
+                        <button class="opciones__cart">Add to cart</button>
+                    </div>
+
+                    <div class="opciones__cartMenu">
+
+                    </div>
                 </section>
 
                 <p>{{descripcion}}</p>
@@ -53,7 +59,7 @@
         </section>
     </div>
 
-    <script src="/script/producto.js"></script>
+    <script src="/script/categoria.js"></script>
 
 </body>
 
