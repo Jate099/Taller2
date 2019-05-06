@@ -10,43 +10,51 @@
 </head>
 
 <body>
-    <div class="app">
-        <section class="app__navegacion">
-            <div class="nav-bar">
-
+    <div class="producto">
+        <section class="categoria__header">
+            <div class="categoria__nav">
+                <ul class="nav">
+                    <li class="item"><a class="links" href="/tienda/headwear">headwear</a></li>
+                    <li class="item"><a class="links" href="/tienda/sweaters">sweaters</a></li>
+                    <li class="item"><a class="links" href="/tienda/jewelry">jewelry</a></li>
+                    <li class="item"><a class="links" href="/tienda/t-shirts">t-shirts</a></li>
+                </ul>
             </div>
         </section>
 
-        <section class="app__contenido">
+        <section class="producto__contenido">
             <section class="preview">
-                <img class="preview__principal" src="{{imgPrincipal}}" alt="">
+                <img class="preview__principal" src="{{imagenes.[0]}}" alt="">
                 <div class="preview__miniaturas">
-                    <img class="preview__miniatura" src="{{miniatura1}}" alt="">
-                    <img class="preview__miniatura" src="{{miniatura2}}" alt="">
-                    <img class="preview__miniatura" src="{{miniatura3}}" alt="">
-                    <img class="preview__miniatura" src="{{miniatura4}}" alt="">
+                    <img class="preview__miniatura" src="{{imagenes.[0]}}" alt="">
+                    <img class="preview__miniatura" src="{{imagenes.[1]}}" alt="">
+                    <img class="preview__miniatura" src="{{imagenes.[2]}}" alt="">
+                    <img class="preview__miniatura" src="{{imagenes.[3]}}" alt="">
                 </div>
             </section>
 
-            <section class="app__info">
+            <section class="producto__info">
                 <section class="encabezado">
-                    <h1 class="encabezado__titulo">{{titulo}}</h1>
+                    <h1 class="encabezado__titulo">{{nombre}}</h1>
                     <p class="encabezado__precio">${{precio}}</p>
                 </section>
 
-                <section class="app__config">
+                <section class="producto__config">
                     <div class="opciones"></div>
                 </section>
 
-                <p>{{descrip}}</p>
+                <p>{{descripcion}}</p>
             </section>
 
-            <section class="app__recomendados">
+            <section class="producto__recomendados">
 
             </section>
 
         </section>
     </div>
+
+    <script src="/script/producto.js"></script>
+
 </body>
 
 </html>

@@ -25,7 +25,7 @@ app.engine('handlebars', renderEngine());
 
 var productos = [];
 
-productos.push({
+/*productos.push({
 titulo: 'Producto 1',
 precio: '39.99',
 imgPrincipal: 'https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5c3871215bafe83b078adbe3/perro.jpg',
@@ -36,7 +36,7 @@ productos.push({
   precio: '10',
   imagen: 'https://www.infobae.com/new-resizer/kAjCyEfwdw0H57sLGDM5OOrTFUI=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/04/06155038/perro-beso-1024x576.jpg',
   descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia sapiente iste, atque, cumque vero expedita consectetur, voluptatum soluta molestias ipsam natus veritatis est blanditiis corporis eveniet vel perspiciatis aspernatur quas?',
-});
+});*/
 
 app.get('/', function (req, response) {
   response.sendFile(__dirname + '/public/landing.html');
@@ -83,6 +83,7 @@ app.get('/tienda/:categoria?', function (request, response) {
       esHeadwear: request.params.categoria == "headwear",
       esSweaters: request.params.categoria == "sweaters",
       esJewelry: request.params.categoria == "jewelry",
+      esT_shirts: request.params.categoria == "t-shirts",
     };
 
     response.render('categoria', contexto);
@@ -91,10 +92,35 @@ app.get('/tienda/:categoria?', function (request, response) {
 
 });
 
-app.get('/tienda/:producto', function (request, response) {
-  var context = productos[0];
-  console.log(request.params.producto);
-  response.render('producto', context);
+app.get('/tienda/:producto?', function (request, response) {
+  console.log(request.params.nombre);
+  //console.log(request.query.precio);
+
+  var query = {};
+  if(request.params.nombre){
+    query.nombre = request.params.nombre;
+  }
+  if(request.query.precio){
+    query.precio = { $lte: request.query.precio };
+}
+
+  var productos = db.collection('productos');
+
+  productos.find(query).toArray(function(err, docs){
+    assert.equal(err, null);
+
+    var contexto = {
+      productos: docs,
+      nombre: request.params.nombre,
+      precio: request.query.precio,
+      /*esHeadwear: request.params.categoria == "headwear",
+      esSweaters: request.params.categoria == "sweaters",
+      esJewelry: request.params.categoria == "jewelry",*/
+    };
+
+    response.render('producto', contexto);
+    
+  });
 });
 
 

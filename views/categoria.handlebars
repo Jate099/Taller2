@@ -21,6 +21,7 @@
                     <li class="item"><a class="links" href="/tienda/headwear">headwear</a></li>
                     <li class="item"><a class="links" href="/tienda/sweaters">sweaters</a></li>
                     <li class="item"><a class="links" href="/tienda/jewelry">jewelry</a></li>
+                    <li class="item"><a class="links" href="/tienda/t-shirts">t-shirts</a></li>
                 </ul>
             </div>
 
@@ -42,19 +43,26 @@
             </div>
             {{/if}}
 
+            {{#if esT_shirts}}
+            <div class="categoria__banner" style="background-image: url(/imagenes/jewelry.jpg)">
+                <h1 class="categoria__titulo">{{categoria}}</h1>
+            </div>
+            {{/if}}
+
         </section>
 
-        <section class="categoria__contenido">
-
-            <div class="filtros">
+        <div class="filtros">
+            <div class="filtros__contenedor">
                 {{#if esHeadwear}}
-                <h1>Filtrar precio</h1>
-                <label>Ingresa el rango de precio</label>
+                <p class="filtros__titulo">Filter</p>
                 <input value="{{precio}}" class="input-rango" type="range" min="1000" max="5000">
                 {{/if}}
             </div>
+        </div>
 
-            <div class="productos">
+        <section class="categoria__contenido">
+
+            <div class="items">
 
                 {{#each productos}}
                 <div class="producto">
@@ -62,8 +70,9 @@
 
                     <div class="producto__info">
                         <div class="producto__infoEsp">
-                            <h2 class="producto__nombre">{{nombre}}</h2>
-                            <p class="producto__precio">{{precio}}</p>
+                            <a class="producto__nombre" href="/tienda/producto">{{nombre}}</a>
+                            <!--<p class="producto__nombre">{{nombre}}</p>-->
+                            <p class="producto__precio">$ {{precio}}</p>
                         </div>
                         <div class="producto__likeBtn"></div>
                     </div>

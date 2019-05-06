@@ -30,21 +30,6 @@ function cargarPag(){
     img.addEventListener('click', clickBoton);
   }
   btnSlider.forEach(recorrerBotones);
-
-  /*function recorrerImagenes(img, index){
-    function clickImagen(event){
-        var url = img.src;
-        banner.style.background = 'blue';
-        banner.style.backgroundImage = 'url(' + url + ')';
-    }
-
-    if(index === 0){
-        clickImagen();
-    }
-
-    img.addEventListener('click', clickImagen);
-}
-btnSlider.forEach(recorrerImagenes);*/  
   
   var contenido = document.querySelectorAll('.tickets__contenido');
   var btnTicket = document.querySelectorAll('.tickets__Btn');
