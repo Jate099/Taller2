@@ -830,19 +830,29 @@ body, html{
         background-color: black;
     }
 
-    .nav, .item{
+    .nav{
         display: flex;
         margin: 0;
         margin-right: 10px;
         flex-direction: row;
         color: white;
         list-style: none;
-    }
 
-    .links{
-        color: white;
-        text-decoration: none;
-    }
+        &__item{
+            display: flex;
+            margin: 0;
+            margin-right: 10px;
+            flex-direction: row;
+            color: white;
+            list-style: none;
+        }
+    
+        &__links{
+            color: white;
+            text-decoration: none;
+        }
+
+    } 
 
     &__banner{
         width: 100%;
@@ -959,7 +969,7 @@ body, html{
             }
         }
 
-        .producto{
+        .item{
             margin-right: 20px;
 
             &__img{

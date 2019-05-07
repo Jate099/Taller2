@@ -18,10 +18,10 @@
         <section class="categoria__header">
             <div class="categoria__nav">
                 <ul class="nav">
-                    <li class="item"><a class="links" href="/tienda/headwear">headwear</a></li>
-                    <li class="item"><a class="links" href="/tienda/sweaters">sweaters</a></li>
-                    <li class="item"><a class="links" href="/tienda/jewelry">jewelry</a></li>
-                    <li class="item"><a class="links" href="/tienda/t-shirts">t-shirts</a></li>
+                    <li class="nav__item"><a class="nav__links" href="/tienda/headwear">headwear</a></li>
+                    <li class="nav__item"><a class="nav__links" href="/tienda/sweaters">sweaters</a></li>
+                    <li class="nav__item"><a class="nav__links" href="/tienda/jewelry">jewelry</a></li>
+                    <li class="nav__item"><a class="nav__links" href="/tienda/t-shirts">t-shirts</a></li>
                 </ul>
             </div>
 
@@ -54,6 +54,7 @@
         <div class="cart">
             <p>cart</p>
             <p class="cart__cant">0</p>
+            <ul class="cart__cartMenu-lista"></ul>
         </div>
 
         <div class="filtros">
@@ -70,17 +71,17 @@
             <div class="items">
 
                 {{#each productos}}
-                <div class="producto">
-                    <img class="producto__img" src="{{imagenes.[0]}}" alt="">
+                <div class="item">
+                    <img class="item__img" src="{{imagenes.[0]}}" alt="">
 
-                    <div class="producto__info">
-                        <div class="producto__infoEsp">
-                            <a class="producto__nombre" href="/tienda/producto/{{nombre}}">{{nombre}}</a>
+                    <div class="item__info">
+                        <div class="item__infoEsp">
+                            <a class="item__nombre" href="/tienda/producto/{{nombre}}">{{nombre}}</a>
                             <!--<p class="producto__nombre">{{nombre}}</p>-->
-                            <p class="producto__precio">$ {{precio}}</p>
+                            <p class="item__precio">$ {{precio}}</p>
                         </div>
-                        <div class="producto__likeBtn"></div>
-                        <button class="producto__carritoBtn">carrito</button>
+                        <div class="item__likeBtn"></div>
+                        <button class="item__carritoBtn">carrito</button>
                     </div>
                 </div>
                 {{/each}}
