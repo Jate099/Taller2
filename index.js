@@ -68,7 +68,7 @@ app.get('/tienda/:categoria?', function (request, response) {
     query.categoria = request.params.categoria;
   }
   if(request.query.precio){
-    query.precio = { $lte: request.query.precio };
+    query.precio = { $lte: parseInt(request.query.precio) };
 }
 
   var productos = db.collection('productos');
