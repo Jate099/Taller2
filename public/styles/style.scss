@@ -962,6 +962,7 @@ body, html{
 .categoria{
     height: 100%;
     transition: all 0.4s;
+    //padding-top: 40px;
 
     &__nav{
         position: fixed;
@@ -1087,7 +1088,6 @@ body, html{
     .preview{
         display: flex;
         flex-direction: row;
-        padding-top: 40px;
         margin-bottom: 15px;
 
         &__principal{
