@@ -38,6 +38,15 @@ function cargarPag(){
     cartCerrar.addEventListener('click', closeCart);
 
     var rango = document.querySelector('.input-rango');
+    var dropDown = document.querySelector('.dropdownPrice');
+
+    /*function buscarPorPrecioDrop(){
+        console.log(dropDown.innerHTML);
+        location.href = '/tienda/headwear?precio=' + dropDown.innerHTML;
+    }
+    if(dropDown != null){
+        dropDown.addEventListener('change', buscarPorPrecioDrop);
+    }*/
 
     function buscarPorPrecio(){
         console.log(rango.value);
@@ -97,6 +106,8 @@ function cargarPag(){
 
     //boton carrito del producto
     var botonPorduct = document.querySelector('.opciones__cart');
+    var btnSumar = document.querySelector('.mas');
+    var btnMenos = document.querySelector('.menos');
 
     //funcion para los botones de ageragr al carrito en la pagina producto
     function agrgarCartProduct(){
@@ -118,8 +129,31 @@ function cargarPag(){
 
             localStorage.setItem('listaProducto', JSON.stringify(listaProducto));
     }
-    if(botonPorduct != null){
+    if(botonPorduct != null && btnSumar != null){
         botonPorduct.addEventListener('click', agrgarCartProduct);
+        btnSumar.addEventListener('click', agrgarCartProduct);
+    }
+
+    function eliminarProdCart(){
+        var nombre = document.querySelector('.encabezado__titulo').innerText;
+            var precio = document.querySelector('.encabezado__precio').innerText;
+            //var imagen = padre.querySelector('.preview__principal').src;
+
+            var producto = {
+                nombre: nombre,
+                precio: precio,
+                //imagen: imagen,
+            }
+
+            listaProducto.splice(producto, 1);
+
+            //carrito.innerHTML = listaProducto.length;
+            actualizarCarrito();
+
+            localStorage.removeItem('listaProducto', JSON.stringify(listaProducto));
+    }
+    if(btnMenos != null){
+        btnMenos.addEventListener('click', eliminarProdCart);
     }
     
 }

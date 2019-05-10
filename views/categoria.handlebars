@@ -86,7 +86,11 @@
             <div class="filtros__contenedor">
                 {{#if esHeadwear}}
                 <p class="filtros__titulo">Filter</p>
-                <input value="{{precio}}" class="input-rango" type="range" min="2499" max="3999">
+                <select name="filtro_precio" id="">
+                    <a href=""><option class="dropdownPrice" value="{{precio}}">24.99</option></a>
+                    <option class="dropdownPrice" value="{{precio}}">39.99</option>
+                </select>
+                <input value="{{precio}}" class="input-rango" type="range" min="24.99" max="39.99">
 
                 {{/if}}
             </div>
