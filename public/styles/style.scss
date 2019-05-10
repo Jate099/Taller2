@@ -1083,6 +1083,53 @@ body, html{
         }
     }
 
+    // pagina del producto
+    .preview{
+        display: flex;
+        flex-direction: row;
+        padding-top: 40px;
+        margin-bottom: 15px;
+
+        &__principal{
+            width: 80%;
+            height: 300px;
+            margin-right: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #aaa;
+        }
+
+        &__miniaturas{
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+        }
+
+        &__miniatura{
+            width: 65px;
+            height: 65px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .encabezado{
+        .titulo-contenedor{
+            width: 40%;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+        }
+
+        &__titulo{
+           
+        }
+    }
+
+    .descripcion{
+       
+    }
+
     @media (max-width: 375px) {
         .categoria{
 
