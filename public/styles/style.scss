@@ -816,10 +816,156 @@ body, html{
 
 }
 
+.sideMenu{
+    position: fixed;
+    z-index: 2;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    left: -200px;
+    transition: all 0.4s;
+    display: none;
+
+    &__menu-btn{
+        position: absolute;
+        left: 210px;
+        top: 6px;
+        transition: all 0.4s;
+    }
+
+    &__menu-btn span{
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    &__cerrar{
+        color: rgba(100, 100, 100, 0.3);;
+    }
+
+    &__navResponsive{
+        display: flex;
+        margin: 0;
+        padding: 10px 10px;
+        flex-direction: column;
+        color: white;
+        list-style: none;
+    }
+
+    &__item{
+        display: flex;
+        margin: 0;
+        padding: 15px 10px;
+        flex-direction: column;
+        color: white;
+        list-style: none;
+        border-bottom: 1px solid  rgba(100, 100, 100, 0.3);
+    }
+
+    &__links{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .sideMenu{
+        display: block;
+    }
+    
+}
+
+.cart{
+    position: fixed;
+    z-index: 2;
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    right: -300px;
+    transition: all 0.4s;
+    //display: none;
+
+    &__cant-container{
+        position: absolute;
+        display: flex;
+        right: 315px;
+        top: 5px;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+        background-color: #D33C7A;
+    }
+
+    &__cant{
+        font-size: 15px;
+        color: white;
+    }
+
+    &__btnContainer{
+        right: 340px;
+    }
+
+    &__carrito-btn{
+        position: absolute;
+        //background-image: url(/imagenes/cart.png);
+        color: #37AB4A;
+        right: 340px;
+        top: 11px;
+        transition: all 0.4s;
+    }
+
+    &__cerrar{
+        color: rgba(100, 100, 100, 0.3);;
+    }
+
+    &__titulo{
+        color: #D33C7A;
+    }
+
+    &__cartMenu-lista{
+        display: flex;
+        margin: 0;
+        padding: 10px 10px;
+        flex-direction: column;
+        color: white;
+        list-style: none;
+    }
+
+    /*&__item{
+        display: flex;
+        margin: 0;
+        padding: 15px 10px;
+        flex-direction: column;
+        color: white;
+        list-style: none;
+        border-bottom: 1px solid  rgba(100, 100, 100, 0.3);
+    }
+
+    &__links{
+        color: white;
+        text-decoration: none;
+    }*/
+}
+
+@media (max-width: 375px) {
+    .cart{
+        width: 200px;
+    }
+    
+}
+
 .categoria{
     height: 100%;
+    transition: all 0.4s;
 
     &__nav{
+        position: fixed;
+        z-index: 1;
         width: 100%;
         height: 50px;
         margin: 0;
@@ -828,52 +974,6 @@ body, html{
         align-items: center;
         margin-bottom: 15px;
         background-color: black;
-    }
-
-    .sideMenu{
-        position: fixed;
-        width: 200px;
-        height: 100%;
-        background-color: black;
-    }
-
-    .toggle-btn{
-        position: absolute;
-        left: 210px;
-        bottom: 20px;
-    }
-
-    .toggle-btn span{
-        display: block;
-        width: 30px;
-        height: 5px;
-        background-color: white;
-        margin: 5px 0;
-        border-radius: 5px;
-    }
-
-    .navResponsive{
-        display: flex;
-        margin: 0;
-        margin-right: 10px;
-        flex-direction: column;
-        color: white;
-        list-style: none;
-
-        &__item{
-            display: flex;
-            margin: 0;
-            margin-right: 10px;
-            flex-direction: column;
-            color: white;
-            list-style: none;
-            border-bottom: 1px solid rgba(100, 100, 100, 0.3);
-        }
-    
-        &__links{
-            color: white;
-            text-decoration: none;
-        }
     }
 
     .nav{
@@ -991,6 +1091,7 @@ body, html{
                 height: 41px;
                 margin: 0;
                 margin-bottom: 15px;
+                //display: none;
             }
 
             &__banner{
@@ -1003,6 +1104,10 @@ body, html{
                 font-size: 35px;
                 color: white;
             }
+        }
+
+        .nav{
+            display: none;
         }
 
         .filtros{
