@@ -16,24 +16,41 @@ body, html{
     &__banner{
         height: 100vh;
         margin: 0;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
 
     }
 
-    &__full-Screen-Banner-Wrap{
+    /*&__full-Screen-Banner-Wrap{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
         overflow: hidden;
+        background-image: url(/imagenes/BannerTienda.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }*/
+
+    &__img-banner{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+         //top: 0;
+        //left: 0;
+        background-image: url(/imagenes/BannerTienda.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    &__full-Screen-Video-Wrap img{
+    /*&__full-Screen-Banner-Wrap img{
         min-width: 100%;
         min-height: 100%;
-    }
+    }*/
 
     &__img-overlay{
         height: 100vh;
@@ -43,7 +60,7 @@ body, html{
         left: 0;
         background: black;
         z-index: 1;
-        opacity: 0.40;
+        opacity: 0.10;
     }
 
     &__header{
@@ -209,32 +226,39 @@ body, html{
         z-index: 2;
     }
 
+    .promo-contenedor{
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        justify-content: center;
+    }
+
     &__titulo1, &__titulo2{
         font-family: 'Roboto', sans-serif;
         color: white;
         margin: 0;
-        margin-bottom: 15px;
         padding: 0;
         transition: 0.4s;
     }
 
     &__titulo1{
-        font-size: 40px
+        font-size: 50px;
+        margin-bottom: 5px;
     }
 
     &__titulo2{
         margin-bottom: 50px;
-        font-size: 70px
+        font-size: 70px;
     }
 
     &__contendor-boton{
-        font-size: 20px;
+        font-size: 30px;
         color: white;
-        background-color: #37AB4A;
-        width: 150px;
-        height: 60px;
+        background-color: #2992CC;
+        width: 250px;
+        height: 90px;
         border: none;
-        border-radius: 50px;
+        border-radius: 30px;
     }
 
     &__boton{
@@ -243,12 +267,71 @@ body, html{
 
     &__contendor-boton:hover{
         background-color: white;
-        color: #37AB4A;
+        color: #2992CC;
+    }
+
+    @media (max-width: 375px){
+        .app{
+
+            &__banner{
+                height: 70%;
+            }
+
+            &__img-banner{
+                height: 70%;
+            }
+
+            &__img-overlay{
+                height: 70%;
+            }
+
+            &__promo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &__titulo1{
+                margin: 0;
+            }
+
+            &__titulo2 strong{
+                margin-bottom: 50px;
+                font-size: 30px;
+            }
+
+            &__contendor-boton{
+                font-size: 25px;
+                width: 200px;
+                height: 80px;
+                border-radius: 30px;
+            }
+        }
+
+        .promo-contenedor{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &__body{
         margin: 0;
         //padding: 1%;
+    }
+
+    &__header-arrivals{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: white;
+        background-color: #2992CC;
     }
 
     .anuncio{

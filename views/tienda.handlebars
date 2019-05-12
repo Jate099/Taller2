@@ -14,8 +14,8 @@
 
 <body>
     <div class="app">
-        
-        <ul>
+
+        <!--<ul>
             {{#each productos}}
             <li>
                 <h2>{{nombre}}</h2>
@@ -24,18 +24,10 @@
                 <p>{{precio}}</p>
             </li>
             {{/each}}
-        </ul>
+        </ul>-->
 
-        <ul>
-            <li><a href="/tienda/headwear">headwear</a></li>
-            <li><a href="/tienda/sweaters">sweaters</a></li>
-            <li><a href="/tienda/jewelry">jewelry</a></li>
-        </ul>
-
-        <section class="app__banner app__container">
-            <div class="app__full-Screen-Banner-Wrap">
-                <img src="" alt="">
-            </div>
+        <section class="app__banner">
+            <div class="app__img-banner"></div>
             <div class="app__img-overlay"></div>
             <div class="primer-contenedor">
                 <header class="app__header">
@@ -45,12 +37,20 @@
                             <a class="app__link-logo" href=""><strong>TOMORROWLAND</strong></a>
                         </section>
                         <nav class="app__nav">
-                            <ul class="app__barra">
+                            <!--<ul class="app__barra">
                                 <li class="app__lista"><a class="app__link" href="#">BELGIUM</a></li>
                                 <li class="app__lista"><a class="app__link" href="#">WINTER</a></li>
                                 <li class="app__lista"><a class="app__link" href="#">UNITE</a></li>
                                 <li class="app__lista"><a class="app__link" href="#">365</a></li>
+                                <li class="app__lista"><a class="app__link" href="/tienda">STORE</a></li>-->
+
+                            <ul class="app__barra">
                                 <li class="app__lista"><a class="app__link" href="/tienda">STORE</a></li>
+                                <li class="app__lista"><a class="app__link" href="/tienda/headwear">headwear</a></li>
+                                <li class="app__lista"><a class="app__link" href="/tienda/sweaters">sweaters</a></li>
+                                <li class="app__lista"><a class="app__link" href="/tienda/t-shirts">T-shirts</a></li>
+                                <li class="app__lista"><a class="app__link" href="/tienda/jewelry">jewelry</a></li>
+                            </ul>
                             </ul>
                         </nav>
                     </section>
@@ -78,28 +78,14 @@
                 </section>
             </div>
 
-            <div class="app__categorias-contenedor">
-                 <a class="app__categoria-link" href="/tienda/headwear">Headwear</a>
-            </div>
-            <div class="app__categorias-contenedor">
-                 <a class="app__categoria-link" href="/tienda/sweaters">Sweaters</a>
-            </div>
-            <div class="app__categorias-contenedor">
-                 <a class="app__categoria-link" href="/tienda/jewelry">Jewelry</a>
-            </div>
-            <div class="app__categorias-contenedor">
-                 <a class="app__categoria-link" href="/tienda/t-shirts">T-shirts</a>
-            </div>
-
             <section class="app__promo">
-                <div>
-                    <h2 class="app__titulo1">People of tomorrow,<br>prepare for a wonderful
-                        new adventure... <br>The Book of Wisdom - The Return.</h2>
-                    <h1 class="app__titulo2"><strong>Tickets Out Now!</strong></h1>
+                <div class="promo-contenedor">
+                    <h1 class="app__titulo1"><strong>TOMORROWLAND</strong></h1>
+                    <h1 class="app__titulo2"><strong>WINTER COLLECTION</strong></h1>
 
                     <a class="app__boton" href="#">
                         <button class="app__contendor-boton">
-                            Buy Now
+                            Shop Now
                         </button>
                     </a>
                 </div>
@@ -108,6 +94,25 @@
         </section>
 
         <section class="app__body">
+
+            <div class="app__header-arrivals">
+                <h1>NEW ARRIVALS</h1>
+            </div>
+
+            <section class="app__categorias">
+                <div class="app__categorias-contenedor">
+                    <a class="app__categoria-link" href="/tienda/headwear">Headwear</a>
+                </div>
+                <div class="app__categorias-contenedor">
+                    <a class="app__categoria-link" href="/tienda/sweaters">Sweaters</a>
+                </div>
+                <div class="app__categorias-contenedor">
+                    <a class="app__categoria-link" href="/tienda/jewelry">Jewelry</a>
+                </div>
+                <div class="app__categorias-contenedor">
+                    <a class="app__categoria-link" href="/tienda/t-shirts">T-shirts</a>
+                </div>
+            </section>
 
             <div class="app__parallax">
                 <section class="anuncio">
@@ -250,7 +255,7 @@
                 <h1>Artists of Tomorrow</h1>
             </section>
 
-            <section class="slider">
+            <!--<section class="slider">
                 <div class="slider__banner">
                     <div class="slider__miniaturas">
                         <div class="slider__contenedor">
@@ -263,7 +268,7 @@
 
                 </div>
 
-            </section>
+            </section>-->
 
         </section>
 
