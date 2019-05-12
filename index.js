@@ -43,7 +43,6 @@ app.get('/', function (req, response) {
 });
 
 app.get('/tienda', function (req, response) {
-
   var productos = db.collection('productos');
   productos.find({}, {sort: ['precio']}).toArray(function(err, docs){
     assert.equal(err, null);
@@ -94,19 +93,19 @@ app.get('/tienda/:categoria?', function (request, response) {
 
 app.get('/tienda/producto/:nombre', function (request, response) {
   console.log(request.params.nombre);
-  //console.log(request.query.precio);
+  console.log(request.query.precio);
 
-  /*var query = {};
+  var query = {};
   if(request.params.nombre){
     query.nombre = request.params.nombre;
   }
   if(request.query.precio){
     query.precio = { $lte: request.query.precio };
-}*/
+}
 
   var productos = db.collection('productos');
 
-  productos.find({nombre: request.params.nombre}).toArray(function(err, docs){
+  productos.find(query).toArray(function(err, docs){
     assert.equal(err, null);
 
     var contexto = {

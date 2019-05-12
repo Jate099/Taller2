@@ -10,7 +10,7 @@
 </head>
 
 <body>
-     <!--Menu de hamburguesa para la version mobile-->
+    <!--Menu de hamburguesa para la version mobile-->
     <div class="sideMenu">
         <div class="sideMenu__menu-btn">
             <span></span>
@@ -28,30 +28,30 @@
 
     <!--Menu del carrito para la version mobile-->
     <div class="cart">
-            <div class="cart__cant-container">
-                <p class="cart__cant">0</p>
-            </div>
-            <div class="cart__carrito-btn">
-                <img src="/imagenes/cart.png" alt="">
-            </div>
+        <div class="cart__cant-container">
+            <p class="cart__cant">0</p>
+        </div>
+        <div class="cart__carrito-btn">
+            <img src="/imagenes/cart.png" alt="">
+        </div>
         <button class="cart__cerrar">Close x</button>
         <h1 class="cart__titulo">YOUR CART</h1>
         <ul class="cart__cartMenu-lista"></ul>
     </div>
 
-    <div class="categoria">
-        <section class="categoria__header">
-            <!--Barra de navegacion para pantallas grandes-->
-             <div class="categoria__nav">
-                <ul class="nav">
-                    <li class="nav__item"><a class="nav__links" href="/tienda/headwear">headwear</a></li>
-                    <li class="nav__item"><a class="nav__links" href="/tienda/sweaters">sweaters</a></li>
-                    <li class="nav__item"><a class="nav__links" href="/tienda/jewelry">jewelry</a></li>
-                    <li class="nav__item"><a class="nav__links" href="/tienda/t-shirts">t-shirts</a></li>
-                </ul>
-            </div>
-        </section>
+    <section class="categoria__header">
+        <!--Barra de navegacion para pantallas grandes-->
+        <div class="categoria__nav">
+            <ul class="nav">
+                <li class="nav__item"><a class="nav__links" href="/tienda/headwear">headwear</a></li>
+                <li class="nav__item"><a class="nav__links" href="/tienda/sweaters">sweaters</a></li>
+                <li class="nav__item"><a class="nav__links" href="/tienda/jewelry">jewelry</a></li>
+                <li class="nav__item"><a class="nav__links" href="/tienda/t-shirts">t-shirts</a></li>
+            </ul>
+        </div>
+    </section>
 
+    <div class="categoria">
         <section class="categoria__contenido">
             <section class="preview">
                 <div class="preview__principal" style="background-image: url({{producto.imagenes.[0]}})"></div>
@@ -69,27 +69,53 @@
                     <div class="titulo-contenedor">
                         <h1 class="encabezado__titulo">{{producto.nombre}}</h1>
                     </div>
-                    <p class="encabezado__precio">${{producto.precio}}</p>
+
+                    <div class="precio-contenedor">
+                        <p class="encabezado__precio">$ {{producto.precio}}</p>
+                    </div>
                 </section>
 
                 <section class="producto__config">
                     <div class="opciones">
-                        <p class="cart__cant">0</p>
-                        <ul class="cart__cartMenu-lista"></ul>
-                        <div class="cantidad">
-                            <button class="mas">+</button>
-                            <button class="menos">-</button>
+                        <div class="opciones__contenedor1">
+                            <p>size</p>
+                            <p>{{producto.tamano}}</p>
+
+                            <p>color</p>
+                            <p>{{producto.colores}}</p>
+
+                            <p class="envio-anuncio">Shipping cost: <strong>From $40.00</strong></p>
+                            <p class="envio-anuncio">Shipping to <strong>Colombia</strong> will take <strong>6-8
+                                    bussines days</strong></p>
                         </div>
-                        <button class="opciones__cart">Add to cart</button>
+
+                        <div class="opciones__contenedor2">
+                            <div class="cantidad">
+                                <button class="cantidad__mas">+</button>
+                                <p class="cantidad__contador">0</p>
+                                <button class="cantidad__menos">-</button>
+                            </div>
+
+                            <div class="opciones__contenedor3">
+                                <div class="opciones__whish">
+                                    <img src="/imagenes/whish.png" alt="">
+                                </div>
+                                <div class="opciones__cart">
+                                    <img src="/imagenes/cartProd.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                 </section>
 
+                <h1>Description</h1>
                 <p class="descripcion">{{producto.descripcion}}</p>
             </section>
 
             <section class="producto__recomendados">
-
+                <h1>Also see</h1>
             </section>
 
         </section>

@@ -32,21 +32,18 @@
 
     <!--Menu del carrito para la version mobile-->
     <div class="cart">
-            <div class="cart__cant-container">
-                <p class="cart__cant">0</p>
-            </div>
-            <div class="cart__carrito-btn">
-                <img src="/imagenes/cart.png" alt="">
-            </div>
+        <div class="cart__cant-container">
+            <p class="cart__cant">0</p>
+        </div>
+        <div class="cart__carrito-btn">
+            <img src="/imagenes/cart.png" alt="">
+        </div>
         <button class="cart__cerrar">Close x</button>
         <h1 class="cart__titulo">YOUR CART</h1>
-        <ul class="cart__cartMenu-lista"></ul>
+        <div class="cart__cartMenu-lista"></div>
     </div>
 
-    <div class="categoria">
-        <section class="categoria__header">
-
-            <div class="categoria__nav">
+    <div class="categoria__nav">
                 <!--Barra de navegacion para pantallas grandes-->
                 <ul class="nav">
                     <li class="nav__item"><a class="nav__links" href="/tienda/headwear">headwear</a></li>
@@ -56,6 +53,8 @@
                 </ul>
             </div>
 
+    <div class="categoria">
+        <section class="categoria__header">
             {{#if esJewelry}}
             <div class="categoria__banner" style="background-image: url(/imagenes/jewelry.jpg)">
                 <h1 class="categoria__titulo">{{categoria}}</h1>
@@ -86,10 +85,18 @@
             <div class="filtros__contenedor">
                 {{#if esHeadwear}}
                 <p class="filtros__titulo">Filter</p>
-                <select name="filtro_precio" id="">
-                    <a href=""><option class="dropdownPrice" value="{{precio}}">24.99</option></a>
-                    <option class="dropdownPrice" value="{{precio}}">39.99</option>
-                </select>
+
+                <div class="filtros__dropdown">
+                    <button class="filtros__dropbtn">Dropdown</button>
+                    <div class="filtros__dropdown-content">
+                        <a class="dropdownPrice" href="/tienda/headwear?precio=39.99"><button>39.99</button></a>
+                        <a class="dropdownPrice" href="/tienda/headwear?precio=34.99"><button>34.99</button></a>
+                        <a class="dropdownPrice" href="/tienda/headwear?precio=29.99"><button>29.99</button></a>
+                        <a class="dropdownPrice" href="/tienda/headwear?precio=24.99"><button>24.99</button></a>
+
+                    </div>
+                </div>
+
                 <input value="{{precio}}" class="input-rango" type="range" min="24.99" max="39.99">
 
                 {{/if}}

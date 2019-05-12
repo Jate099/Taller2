@@ -38,15 +38,6 @@ function cargarPag(){
     cartCerrar.addEventListener('click', closeCart);
 
     var rango = document.querySelector('.input-rango');
-    var dropDown = document.querySelector('.dropdownPrice');
-
-    /*function buscarPorPrecioDrop(){
-        console.log(dropDown.innerHTML);
-        location.href = '/tienda/headwear?precio=' + dropDown.innerHTML;
-    }
-    if(dropDown != null){
-        dropDown.addEventListener('change', buscarPorPrecioDrop);
-    }*/
 
     function buscarPorPrecio(){
         console.log(rango.value);
@@ -71,7 +62,7 @@ function cargarPag(){
 
         listaCarrito.innerHTML = '';
         listaProducto.forEach(function(producto){
-            listaCarrito.innerHTML += '<img src="' + producto.imagen + '" width="50">' + producto.nombre;
+            listaCarrito.innerHTML += '<div class="cart__item"><img class="cart__img" src="' + producto.imagenes + '" width="50"><p class="cart__nombre">'+ producto.nombre +'</p><p class="cart__precio">'+ producto.precio +'</p></div>';
         });
     }
     actualizarCarrito();
@@ -106,8 +97,8 @@ function cargarPag(){
 
     //boton carrito del producto
     var botonPorduct = document.querySelector('.opciones__cart');
-    var btnSumar = document.querySelector('.mas');
-    var btnMenos = document.querySelector('.menos');
+    var btnSumar = document.querySelector('.cantidad__mas');
+    var btnMenos = document.querySelector('.cantidad__menos');
 
     //funcion para los botones de ageragr al carrito en la pagina producto
     function agrgarCartProduct(){
@@ -155,6 +146,26 @@ function cargarPag(){
     if(btnMenos != null){
         btnMenos.addEventListener('click', eliminarProdCart);
     }
+
+    var cantidad = document.querySelector('.cantidad__contador');
+    var contador = 0;
+
+    function sumarProd(){
+        contador++;
+
+        cantidad.innerHTML = contador;
+        console.log(contador);
+
+    }
+    btnSumar.addEventListener('click', sumarProd);
+
+    function restarProd(){
+        contador--;
+
+        cantidad.innerHTML = contador;
+        console.log(contador);
+    }
+    btnMenos.addEventListener('click', restarProd);
     
 }
 window.addEventListener('load', cargarPag);

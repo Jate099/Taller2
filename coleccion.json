@@ -124,6 +124,7 @@
         "precio": 39.99,
         "descripcion": "The Moon Mist Beanie is made for the People of Tomorrow that pursue an active lifestyle and aren't afraid to explore even the most coldest of regions. The white neps on the black fabric mix represent stars in a dark, cold night, but the Moon Mist Beanie is guaranteed to keep you warm. A black embroidered label shows the white Tomorrowland lettering on this clean and soft beanie.",
         "categoria": "headwear",
+        "tamano": "All sizes",
         "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
         "colores": ["black"]
 

@@ -874,6 +874,13 @@ body, html{
 @media (max-width: 375px) {
     .sideMenu{
         display: block;
+
+        &__menu-btn{
+            position: absolute;
+            left: 210px;
+            top: 10px;
+            transition: all 0.4s;
+        }
     }
     
 }
@@ -959,8 +966,40 @@ body, html{
     
 }
 
+.nav{
+    display: flex;
+    margin: 0;
+    margin-right: 10px;
+    flex-direction: row;
+    color: white;
+    list-style: none;
+
+    &__item{
+        display: flex;
+        margin: 0;
+        margin-right: 10px;
+        flex-direction: row;
+        color: white;
+        list-style: none;
+    }
+
+    &__links{
+        color: white;
+        text-decoration: none;
+    }
+
+}
+
+@media (max-width: 375px){
+    .nav{
+        display: none;
+    }
+
+}
+
 .categoria{
     height: 100%;
+    padding-top: 65px;
     transition: all 0.4s;
     //padding-top: 40px;
 
@@ -976,30 +1015,6 @@ body, html{
         margin-bottom: 15px;
         background-color: black;
     }
-
-    .nav{
-        display: flex;
-        margin: 0;
-        margin-right: 10px;
-        flex-direction: row;
-        color: white;
-        list-style: none;
-
-        &__item{
-            display: flex;
-            margin: 0;
-            margin-right: 10px;
-            flex-direction: row;
-            color: white;
-            list-style: none;
-        }
-    
-        &__links{
-            color: white;
-            text-decoration: none;
-        }
-
-    } 
 
     &__banner{
         width: 100%;
@@ -1043,12 +1058,15 @@ body, html{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        //justify-content: center;
     }
 
     .item{
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
+        margin: 0;
+        margin-right: 10px;
+        margin-left: 10px;
         margin-bottom: 25px;
 
         &__img{
@@ -1088,7 +1106,7 @@ body, html{
     .preview{
         display: flex;
         flex-direction: row;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
 
         &__principal{
             width: 80%;
@@ -1114,15 +1132,121 @@ body, html{
     }
 
     .encabezado{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
         .titulo-contenedor{
-            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: 40px;
+            padding: 5px;
             border-style: solid;
             border-width: 1px;
             border-color: black;
+            border-radius: 5px;
         }
 
         &__titulo{
-           
+            font-size: 25px;
+            margin: 0;
+        }
+
+        .precio-contenedor{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: 40px;
+            padding: 5px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #37AB4A;
+            border-radius: 5px;
+        }
+
+        &__precio{
+            font-size: 20px;
+            margin: 0;
+            color: #37AB4A;
+        }
+    }
+
+    .opciones{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 25px;
+
+        &__contenedor1{
+            width: 70%;
+        }
+
+        &__contenedor2{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 30%;
+
+        }
+
+        &__contenedor3{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        &__whish{
+            width: 27px;
+            margin-right: 25px;
+            background-color: white;
+            border: none;
+        }
+
+        &__cart{
+            width: 27px;
+            background-color: white;
+            border: none;
+        }
+
+        .envio-anuncio{
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+    }
+
+    .cantidad{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-self: flex-end;
+        width: 80px;
+        height: 30px;
+        border-radius: 100px;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        border-left-width: 0;
+        border-right-width: 0;
+        margin-bottom: 15px;
+
+        &__mas, &__menos{
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 100px;
+
+        }
+
+        &__contador{
+
         }
     }
 
@@ -1153,10 +1277,6 @@ body, html{
             }
         }
 
-        .nav{
-            display: none;
-        }
-
         .filtros{
             width: 100%;
             margin-bottom: 20px;
@@ -1168,7 +1288,10 @@ body, html{
         }
 
         .item{
-            margin-right: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 25px;
 
             &__img{
                 margin-bottom: 5px;
