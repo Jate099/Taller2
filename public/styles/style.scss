@@ -39,8 +39,6 @@ body, html{
         position: absolute;
         width: 100%;
         height: 100vh;
-         //top: 0;
-        //left: 0;
         background-image: url(/imagenes/BannerTienda.jpg);
         background-position: center;
         background-repeat: no-repeat;
@@ -205,15 +203,6 @@ body, html{
         }
     }
 
-    &__video{
-        //background-size: cover;
-        //background-repeat: no-repeat;
-        //background-position: center;
-        flex: 1 1 1080px;
-        height: 100vh;
-        //height: 973px;
-    }
-
     &__promo{
         display: flex;
         flex-direction: column;
@@ -332,6 +321,138 @@ body, html{
         font-size: 15px;
         color: white;
         background-color: #2992CC;
+    }
+
+    .categorias{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+
+        &__cont-fila{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__contenedorHead{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 160px;
+            margin: 2%;
+            background-image: url(/imagenes/headwearCat-25.png);
+            //background-color: #2992CC;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__contenedorSweat{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height:160px;
+            margin: 2%;
+            background-image: url(/imagenes/sweatersCat.png);
+            //background-color: #2992CC;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__contenedorJew{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 160px;
+            margin: 2%;
+            background-image: url(/imagenes/jewelryCat.png);
+            //background-color: #2992CC;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__contenedorT{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 160px;
+            margin: 2%;
+            background-image: url(/imagenes/t-shirtsCat.png);
+            //background-color: #2992CC;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(0,0,0,0.55);
+        }
+
+        &__boton{
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 0;
+            color: white;
+        }
+
+    }
+
+    .genero{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 15px;
+
+        &__contenedor{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 80%;
+            margin: 2%;
+        }
+
+        &__mujer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 400px;
+            background-image: url(/imagenes/mujerCat.png);
+            //background-color: #2992CC;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__hombre{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 400px;
+            background-image: url(/imagenes/hombreCat.png);
+            //background-color: #2992CC;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     }
 
     .anuncio{
