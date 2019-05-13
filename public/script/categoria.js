@@ -221,5 +221,18 @@ function cargarPag() {
     }
     btnMenos.addEventListener('click', restarProd);
 
+    //-------------checkout--------------------------------------------
+    var form = document.querySelector('.form');
+
+    function enviarProds(event){
+        //event.preventDefault();
+
+        var input = document.querySelector('.productos');
+        input.value = localStorage.getItem('listaProducto');
+
+        localStorage.removeItem('listaProducto');
+    }
+    form.addEventListener('submit', enviarProds);
+
 }
 window.addEventListener('load', cargarPag);

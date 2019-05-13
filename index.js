@@ -122,6 +122,46 @@ app.get('/tienda/producto/:nombre', function (request, response) {
   });
 });
 
+app.post('/tienda/checkout', function (request, response) {
+  
+  console.log(request.params.categoria);
+  //console.log(request.query.precio);
+
+  var query = {};
+  if(request.params.categoria){
+    query.categoria = request.params.categoria;
+  }
+  if(request.query.precio){
+    query.precio = { $lte: parseFloat(request.query.precio) };
+}
+
+var pedido = {
+  correo: request.body.correo,
+  productos: JSON.parse(request.body.productos),
+};
+
+  var productos = db.collection('pedidos');
+
+  productos.find(query).toArray(function(err, docs){
+    assert.equal(err, null);
+
+    /*var contexto = {
+      productos: docs,
+      categoria: request.params.categoria,
+      precio: request.query.precio,
+      esHeadwear: request.params.categoria == "headwear",
+      esSweaters: request.params.categoria == "sweaters",
+      esJewelry: request.params.categoria == "jewelry",
+      esT_shirts: request.params.categoria == "t-shirts",
+    };*/
+
+    response.redirect('/');
+    
+  });
+
+});
+
+
 
 app.listen(3000, function () {
   console.log('Aplicación ejemplo, escuchando el puerto 3000!');
