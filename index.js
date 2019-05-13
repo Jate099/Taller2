@@ -20,6 +20,8 @@ client.connect(function(err) {
 });
 
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+
 app.set('view engine', 'handlebars');
 app.engine('handlebars', renderEngine());
 
@@ -122,46 +124,60 @@ app.get('/tienda/producto/:nombre', function (request, response) {
   });
 });
 
-app.post('/tienda/checkout', function (request, response) {
-  
-  console.log(request.params.categoria);
-  //console.log(request.query.precio);
+app.get('/tienda/producto/checkout', function (request, response) {
+  console.log(request.params.nombre);
+  console.log(request.query.precio);
 
   var query = {};
-  if(request.params.categoria){
-    query.categoria = request.params.categoria;
+  if(request.params.nombre){
+    query.nombre = request.params.nombre;
   }
   if(request.query.precio){
-    query.precio = { $lte: parseFloat(request.query.precio) };
+    query.precio = { $lte: request.query.precio };
 }
+
+  var productos = db.collection('productos');
+
+  productos.find(query).toArray(function(err, docs){
+    assert.equal(err, null);
+
+    var contexto = {
+      producto: docs[0],
+      /*nombre: request.params.nombre,
+      precio: request.query.precio,
+      esHeadwear: request.params.categoria == "headwear",
+      esSweaters: request.params.categoria == "sweaters",
+      esJewelry: request.params.categoria == "jewelry",*/
+    };
+
+    response.render('checkout', contexto);
+    
+  });
+});
+
+app.post('/tienda/checkout', function (request, response) {
+  
+console.log(request.body);
 
 var pedido = {
   correo: request.body.correo,
+  contrasena: request.body.contrasena,
+  fecha: new Date(),
+  estado: 'nuevo',
   productos: JSON.parse(request.body.productos),
 };
 
   var productos = db.collection('pedidos');
 
-  productos.find(query).toArray(function(err, docs){
+  productos.insertOne(pedido, function(err, docs){
     assert.equal(err, null);
 
-    /*var contexto = {
-      productos: docs,
-      categoria: request.params.categoria,
-      precio: request.query.precio,
-      esHeadwear: request.params.categoria == "headwear",
-      esSweaters: request.params.categoria == "sweaters",
-      esJewelry: request.params.categoria == "jewelry",
-      esT_shirts: request.params.categoria == "t-shirts",
-    };*/
-
-    response.redirect('/');
-    
+    console.log('pedido guardado');    
   });
 
+  response.redirect('/');
+
 });
-
-
 
 app.listen(3000, function () {
   console.log('Aplicación ejemplo, escuchando el puerto 3000!');
