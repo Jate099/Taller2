@@ -10,7 +10,7 @@ const client = new MongoClient(url);
 
 var db = null;
 
-client.connect(function(err) {
+client.connect(function (err) {
   assert.equal(null, err);
   console.log("Connected successfully to server");
 
@@ -46,7 +46,7 @@ app.get('/', function (req, response) {
 
 app.get('/tienda', function (req, response) {
   var productos = db.collection('productos');
-  productos.find({}, {sort: ['precio']}).toArray(function(err, docs){
+  productos.find({}, { sort: ['precio'] }).toArray(function (err, docs) {
     assert.equal(err, null);
 
     var contexto = {
@@ -54,27 +54,27 @@ app.get('/tienda', function (req, response) {
     };
 
     response.render('tienda', contexto);
-    
+
   });
 
 });
 
 app.get('/tienda/:categoria?', function (request, response) {
-  
+
   console.log(request.params.categoria);
   //console.log(request.query.precio);
 
   var query = {};
-  if(request.params.categoria){
+  if (request.params.categoria) {
     query.categoria = request.params.categoria;
   }
-  if(request.query.precio){
+  if (request.query.precio) {
     query.precio = { $lte: parseFloat(request.query.precio) };
-}
+  }
 
   var productos = db.collection('productos');
 
-  productos.find(query).toArray(function(err, docs){
+  productos.find(query).toArray(function (err, docs) {
     assert.equal(err, null);
 
     var contexto = {
@@ -88,7 +88,7 @@ app.get('/tienda/:categoria?', function (request, response) {
     };
 
     response.render('categoria', contexto);
-    
+
   });
 
 });
@@ -98,16 +98,16 @@ app.get('/tienda/producto/:nombre', function (request, response) {
   console.log(request.query.precio);
 
   var query = {};
-  if(request.params.nombre){
+  if (request.params.nombre) {
     query.nombre = request.params.nombre;
   }
-  if(request.query.precio){
+  if (request.query.precio) {
     query.precio = { $lte: request.query.precio };
-}
+  }
 
   var productos = db.collection('productos');
 
-  productos.find(query).toArray(function(err, docs){
+  productos.find(query).toArray(function (err, docs) {
     assert.equal(err, null);
 
     var contexto = {
@@ -120,62 +120,67 @@ app.get('/tienda/producto/:nombre', function (request, response) {
     };
 
     response.render('producto', contexto);
-    
+
   });
 });
 
-app.get('/tienda/producto/checkout', function (request, response) {
+app.get('/checkout', function (request, response) {
   console.log(request.params.nombre);
   console.log(request.query.precio);
 
   var query = {};
-  if(request.params.nombre){
+  if (request.params.nombre) {
     query.nombre = request.params.nombre;
   }
-  if(request.query.precio){
+  if (request.query.precio) {
     query.precio = { $lte: request.query.precio };
-}
+  }
 
   var productos = db.collection('productos');
 
-  productos.find(query).toArray(function(err, docs){
+  productos.find(query).toArray(function (err, docs) {
     assert.equal(err, null);
 
     var contexto = {
       producto: docs[0],
-      /*nombre: request.params.nombre,
+      nombre: request.params.nombre,
       precio: request.query.precio,
-      esHeadwear: request.params.categoria == "headwear",
+      /*esHeadwear: request.params.categoria == "headwear",
       esSweaters: request.params.categoria == "sweaters",
       esJewelry: request.params.categoria == "jewelry",*/
     };
 
     response.render('checkout', contexto);
-    
+
   });
 });
 
-app.post('/tienda/checkout', function (request, response) {
-  
-console.log(request.body);
+app.post('/login', function (request, response) {
 
-var pedido = {
-  correo: request.body.correo,
-  contrasena: request.body.contrasena,
-  fecha: new Date(),
-  estado: 'nuevo',
-  productos: JSON.parse(request.body.productos),
-};
+  console.log(request.body);
 
-  var productos = db.collection('pedidos');
+  let productos = request.body.productos;
+  if(productos == null){
+    productos = {};
+  }
 
-  productos.insertOne(pedido, function(err, docs){
+  var pedido = {
+    correo: request.body.correo,
+    contrasena: request.body.contrasena,
+    fecha: new Date(),
+    estado: 'nuevo',
+    productos: JSON.parse(productos),
+  };
+
+  var collection = db.collection('pedidos');
+
+  collection.insertOne(pedido, function (err) {
     assert.equal(err, null);
 
-    console.log('pedido guardado');    
+    console.log('pedido guardado');
   });
 
-  response.redirect('/');
+  response.redirect('/tienda');
 
 });
 

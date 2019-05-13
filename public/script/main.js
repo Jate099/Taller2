@@ -14,7 +14,7 @@ function cargarPag(){
   var banner = document.querySelector('.slider__banner');
   var btnSlider = document.querySelectorAll('.slider__btn-img');
 
-  banner.style.background = 'url(' + imagenes[contador] + ')';
+  /*banner.style.background = 'url(' + imagenes[contador] + ')';
 
   function recorrerBotones(img, index){
     
@@ -29,7 +29,7 @@ function cargarPag(){
     }
     img.addEventListener('click', clickBoton);
   }
-  btnSlider.forEach(recorrerBotones);
+  btnSlider.forEach(recorrerBotones);*/
   
   var contenido = document.querySelectorAll('.tickets__contenido');
   var btnTicket = document.querySelectorAll('.tickets__Btn');

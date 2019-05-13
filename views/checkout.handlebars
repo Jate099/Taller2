@@ -19,6 +19,7 @@
         </div>
         <button class="sideMenu__cerrar">Close x</button>
         <ul class="sideMenu__navResponsive">
+            <li class="sideMenu__item"><a class="sideMenu__links" href="/tienda">Home</a></li>
             <li class="sideMenu__item"><a class="sideMenu__links" href="/tienda/headwear">Headwear</a></li>
             <li class="sideMenu__item"><a class="sideMenu__links" href="/tienda/sweaters">Sweaters</a></li>
             <li class="sideMenu__item"><a class="sideMenu__links" href="/tienda/jewelry">Jewelry</a></li>
@@ -34,9 +35,25 @@
         <div class="cart__carrito-btn">
             <img src="/imagenes/cart.png" alt="">
         </div>
+
         <button class="cart__cerrar">Close x</button>
         <h1 class="cart__titulo">YOUR CART</h1>
-        <ul class="cart__cartMenu-lista"></ul>
+        <div class="cart__cartMenu-lista">
+
+            
+        </div>
+        
+        <form action="/login" method="POST">
+            <label for="correo">Correo</label>
+            <input name="correo" class="input-correo" type="email" id="" placeholder="tuqlo@fish4hoes.com">
+
+            <label for="">Contraseña</label>
+            <input class="input-contrasena" name="contrasena" type="password" placeholder="Contraseña">
+
+            <input class="input-productos" type="hidden" name="productos" value="">
+
+            <button>Ingresar</button>
+        </form>
     </div>
 
     <section class="categoria__header">
@@ -51,18 +68,6 @@
         </div>
     </section>
 
-    <form action="/login" method="POST">
-        <label for="correo">Correo</label>
-        <input name="correo" class="correo" type="email" id="" placeholder="tuqlo@fish4hoes.com">
-
-        <label for="">Contraseña</label>
-        <input name="contrasena" type="password" id="" placeholder="Contraseña">
-
-        <input class="productos" type="hidden" name="productos" value="">
-
-        <button>Ingresar</button>
-    </form>
-
     <div class="categoria">
         <section class="categoria__contenido">
             <section class="preview">
@@ -75,6 +80,8 @@
                     <img class="preview__miniatura" src="{{producto.imagenes.[3]}}" alt="">
                 </div>
             </section>
+
+            <h1>chekauuu xdxdxdxdxdxdxx</h1>
 
             <section class="producto__info">
                 <section class="encabezado">
@@ -130,10 +137,36 @@
                 <h1>Also see</h1>
             </section>
 
+            <section class="categorias">
+                <div class="categorias__cont-fila">
+                    <div class="categorias__contenedorHead">
+                        <a class="categorias__link" href="/tienda/headwear"><button
+                                class="categorias__boton">HEADWEAR</button></a>
+                    </div>
+                    <div class="categorias__contenedorSweat">
+                        <a class="categorias__link" href="/tienda/sweaters"><button
+                                class="categorias__boton">SWEATERS</button></a>
+                    </div>
+                </div>
+
+                <div class="categorias__cont-fila">
+                    <div class="categorias__contenedorJew">
+                        <a class="categorias__link" href="/tienda/jewelry"><button
+                                class="categorias__boton">JEWELRY</button></a>
+                    </div>
+                    <div class="categorias__contenedorT">
+                        <a class="categorias__link" href="/tienda/t-shirts"><button
+                                class="categorias__boton">T-SHIRTS</button></a>
+                    </div>
+                </div>
+            </section>
+
         </section>
     </div>
 
     <script src="/script/categoria.js"></script>
+    <script src="/script/checkout.js"></script>
+
 
 </body>
 
