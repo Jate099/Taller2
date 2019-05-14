@@ -40,7 +40,7 @@
         <h1 class="cart__titulo">YOUR CART</h1>
         <div class="cart__cartMenu-lista">
 
-            
+
         </div>
 
         <p class="cart__valorTotal"></p>
@@ -75,60 +75,63 @@
 
             <div class="contenedor-responsive">
                 <section class="producto__info">
-                <section class="encabezado">
-                    <div class="titulo-contenedor">
-                        <h1 class="encabezado__titulo">{{producto.nombre}}</h1>
-                    </div>
-
-                    <div class="precio-contenedor">
-                        <p class="encabezado__precio">$ {{producto.precio}}</p>
-                    </div>
-                </section>
-
-                <section class="producto__config">
-                    <div class="opciones">
-                        <div class="opciones__contenedor1">
-                            <p>size</p>
-                            <p>{{producto.tamano}}</p>
-
-                            <p>color</p>
-                            <p>{{producto.colores}}</p>
-
-                            <p class="envio-anuncio">Shipping cost: <strong>From $40.00</strong></p>
-                            <p class="envio-anuncio">Shipping to <strong>Colombia</strong> will take <strong>6-8
-                                    bussines days</strong></p>
+                    <section class="encabezado">
+                        <div class="titulo-contenedor">
+                            <h1 class="encabezado__titulo">{{producto.nombre}}</h1>
                         </div>
 
-                        <div class="opciones__contenedor2">
-                            <div class="cantidad">
-                                <button class="cantidad__mas">+</button>
-                                <p class="cantidad__contador">0</p>
-                                <button class="cantidad__menos">-</button>
-                            </div>
-
-                            <div class="opciones__contenedor3">
-                                <div class="opciones__whish">
-                                    <img src="/imagenes/whish.png" alt="">
-                                </div>
-                                <div class="opciones__cart">
-                                    <img src="/imagenes/cartProd.png" alt="">
-                                </div>
-                            </div>
-
+                        <div class="precio-contenedor">
+                            <p class="encabezado__precio">$ {{producto.precio}}</p>
                         </div>
-                    </div>
+                    </section>
 
-                </section>
+                    <section class="producto__config">
+                        <div class="opciones">
+                            <div class="opciones__contenedor1">
+                                <p class="opcione__tamano">size</p>
+                                <p>{{producto.tamano}}</p>
+
+                                <p>color</p>
+                                <p>{{producto.colores}}</p>
+
+                                <p class="envio-anuncio">Shipping cost: <strong>From $40.00</strong></p>
+                                <p class="envio-anuncio">Shipping to <strong>Colombia</strong> will take <strong>6-8
+                                        bussines days</strong></p>
+                            </div>
+
+                            <div class="opciones__contenedor2">
+                                <div class="cantidad">
+                                    <button class="cantidad__mas">+</button>
+                                    <p class="cantidad__contador">0</p>
+                                    <button class="cantidad__menos">-</button>
+                                </div>
+
+                                <div class="opciones__contenedor3">
+                                    <div class="opciones__whish">
+                                        <img src="/imagenes/whish.png" alt="">
+                                    </div>
+                                    <div class="opciones__cart">
+                                        <img src="/imagenes/cartProd.png" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="descripcion">
+                        <h1 class="descripcion__titulo">Description</h1>
+                        <p class="descripcion__info">{{producto.descripcion}}</p>
+                    </section>
+
+                    <div class="pasarPorductos">
+                        <a href="">Previous Product</a>
+                        <a href="">Next Product</a>
+                    </div>
             </div>
-            
+        </section>
 
-            </section>
-            
-            <section class="producto__descripcion">
-                <h1>Description</h1>
-                <p class="descripcion">{{producto.descripcion}}</p>
-            </section>
-            
+        <div class="contenido-secundario">
             <section class="producto__recomendados">
                 <h1>Also see</h1>
             </section>
@@ -156,11 +159,11 @@
                     </div>
                 </div>
             </section>
-
-        </section>
+        </div>
     </div>
 
     <script src="/script/categoria.js"></script>
+    <script src="/script/menus.js"></script>
 
 </body>
 
