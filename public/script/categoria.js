@@ -260,6 +260,7 @@ function cargarPag() {
         btnMenos.addEventListener('click', restarProd);
 
 
+    //-------------valor total del carrito--------------------------------------------
 
     function actualizarNumeroCarrito() {
 
@@ -277,9 +278,6 @@ function cargarPag() {
     }
 
         actualizarNumeroCarrito();
-
-        //-------------checkout--------------------------------------------
-
 
     }
     window.addEventListener('load', cargarPag);

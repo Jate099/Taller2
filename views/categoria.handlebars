@@ -51,37 +51,37 @@
     </div>
 
     <div class="categoria__nav">
-                <!--Barra de navegacion para pantallas grandes-->
-                <ul class="nav">
-                    <li class="nav__item"><a class="nav__links" href="/tienda/headwear">headwear</a></li>
-                    <li class="nav__item"><a class="nav__links" href="/tienda/sweaters">sweaters</a></li>
-                    <li class="nav__item"><a class="nav__links" href="/tienda/jewelry">jewelry</a></li>
-                    <li class="nav__item"><a class="nav__links" href="/tienda/t-shirts">t-shirts</a></li>
-                </ul>
-            </div>
+        <!--Barra de navegacion para pantallas grandes-->
+        <ul class="nav">
+            <li class="nav__item"><a class="nav__links" href="/tienda/headwear">headwear</a></li>
+            <li class="nav__item"><a class="nav__links" href="/tienda/sweaters">sweaters</a></li>
+            <li class="nav__item"><a class="nav__links" href="/tienda/jewelry">jewelry</a></li>
+            <li class="nav__item"><a class="nav__links" href="/tienda/t-shirts">t-shirts</a></li>
+        </ul>
+    </div>
 
     <div class="categoria">
         <section class="categoria__header">
             {{#if esJewelry}}
-            <div class="categoria__banner" style="background-image: url(/imagenes/jewelry.jpg)">
+            <div class="categoria__banner" style="background-image: url(https://metafields-manager-by-hulkapps.s3.amazonaws.com/uploads/tml-webshop.myshopify.com/collections/1557237403-Jewelry3jpg)">
                 <h1 class="categoria__titulo">{{categoria}}</h1>
             </div>
             {{/if}}
 
             {{#if esHeadwear}}
-            <div class="categoria__banner" style="background-image: url(/imagenes/headwear.jpg)">
+            <div class="categoria__banner" style="background-image: url(/imagenes/headwearBanner.jpg)">
                 <h1 class="categoria__titulo">{{categoria}}</h1>
             </div>
             {{/if}}
 
             {{#if esSweaters}}
-            <div class="categoria__banner" style="background-image: url(/imagenes/jewelry.jpg)">
+            <div class="categoria__banner" style="background-image: url(//cdn.shopify.com/s/files/1/0921/8620/t/18/assets/slide-landingspage-2-1.jpg?264)">
                 <h1 class="categoria__titulo">{{categoria}}</h1>
             </div>
             {{/if}}
 
             {{#if esT_shirts}}
-            <div class="categoria__banner" style="background-image: url(/imagenes/jewelry.jpg)">
+            <div class="categoria__banner" style="background-image: url(https://metafields-manager-by-hulkapps.s3.amazonaws.com/uploads/tml-webshop.myshopify.com/collections/1557237098-Menjpg)">
                 <h1 class="categoria__titulo">{{categoria}}</h1>
             </div>
             {{/if}}
@@ -121,11 +121,11 @@
                     <div class="item__info">
                         <div class="item__infoEsp">
                             <a class="item__nombre" href="/tienda/producto/{{nombre}}">{{nombre}}</a>
-                            <!--<p class="producto__nombre">{{nombre}}</p>-->
                             <p class="item__precio">$ {{precio}}</p>
                         </div>
-                        <div class="item__likeBtn"></div>
-                        <button class="item__carritoBtn">carrito</button>
+                        <div class="item__carritoBtn">
+                            <img src="/imagenes/whish.png" alt="">
+                        </div>
                     </div>
                 </div>
                 {{/each}}
