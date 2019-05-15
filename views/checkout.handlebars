@@ -41,7 +41,79 @@
 
     <div class="categoria">
 
-            <h1>chekauuu xdxdxdxdxdxdxx</h1>
+        <h1 class="categoria__titulo-checkout">Finish Your Order</h1>
+
+        <div class="contenido-checkout">
+
+            <form class="contenido-checkout__user-info" class="" action="/login" method="POST">
+
+                <section class="correoUser">
+                    <div class="field-wrapper">
+                        <input name="correo" class="input-correo" type="email" id="">
+                        <div class="field-placeholder"><span>Enter your email</span></div>
+                    </div>
+
+                    <div class="field-wrapper">
+                        <input class="input-contrasena" name="contrasena" type="password">
+                        <div class="field-placeholder"><span>Enter your password</span></div>
+                    </div>
+                </section>
+
+                <section class="infoUser2">
+                    <section class="nombreUser">
+                        <div class="field-wrapper" id="nombre">
+                            <input class="input-nombre" name="nombre" type="text">
+                            <div class="field-placeholder" id="name"><span>Enter your Name</span></div>
+                        </div>
+
+                        <div class="field-wrapper" id="apellido">
+                            <input class="input-apellido" name="apellido" type="text">
+                            <div class="field-placeholder" id="lastName"><span>Enter your Last Name</span></div>
+                        </div>
+                    </section>
+
+                    <div class="field-wrapper" id="nombre">
+                        <input class="input-direccion" name="direccion" type="text">
+                        <div class="field-placeholder"><span>Enter your Adress</span></div>
+                    </div>
+
+
+                    <div class="field-wrapper" id="nombre">
+                        <input class="input-ciudad" name="ciudad" type="text">
+                        <div class="field-placeholder"><span>Enter your City</span></div>
+                    </div>
+                </section>
+
+                <section class="tarjetaInfo">
+                    <div class="field-wrapper" id="nombre">
+                        <input class="input-nombreTarjeta" name="tarjetaNombre" type="text">
+                        <div class="field-placeholder"><span>Enter Name on Card</span></div>
+                    </div>
+
+                    <div class="field-wrapper" id="nombre">
+                        <input class="input-numeroTarjeta" name="tarjetaNumero" type="text">
+                        <div class="field-placeholder"><span>Enter Credit Card Number</span></div>
+                    </div>
+
+                    <section class="tarjetaFechas">
+                        <div class="field-wrapper" id="input-fecha">
+                            <input class="input-expiracion" name="nombre" type="text">
+                            <div class="field-placeholder" id="fechExpiracion"><span>Expiration Date MM/YY</span></div>
+                        </div>
+
+                        <div class="field-wrapper" id="input-cod">
+                            <input class="input-codigo" name="apellido" type="text">
+                            <div class="field-placeholder" id="cvc"><span>Enter CVC</span></div>
+                        </div>
+                    </section>
+                    
+                </section>
+
+
+                <input class="input-productos" type="hidden" name="productos" value="">
+
+                <button class="contenido-checkout__finalizar">Finish</button>
+            </form>
 
             <div class="cart-checkout">
                 <div class="cart__cant-container">
@@ -57,20 +129,13 @@
                 </div>
             </div>
 
-            <form action="/login" method="POST">
-                <label for="correo">Correo</label>
-                <input name="correo" class="input-correo" type="email" id="" placeholder="tuqlo@fish4hoes.com">
+        </div>
 
-                <label for="">Contraseña</label>
-                <input class="input-contrasena" name="contrasena" type="password" placeholder="Contraseña">
-
-                <input class="input-productos" type="hidden" name="productos" value="">
-
-                <button>Ingresar</button>
-            </form>
 
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="/script/inputs.js"></script>
     <script src="/script/categoria.js"></script>
     <script src="/script/checkout.js"></script>
 
