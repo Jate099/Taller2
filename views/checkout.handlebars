@@ -41,7 +41,9 @@
 
     <div class="categoria">
 
-        <h1 class="categoria__titulo-checkout">Finish Your Order</h1>
+        <div></div>
+
+        <h1 class="categoria__titulo-checkout">User Info</h1>
 
         <div class="contenido-checkout">
 
@@ -62,12 +64,12 @@
                 <section class="infoUser2">
                     <section class="nombreUser">
                         <div class="field-wrapper" id="nombre">
-                            <input class="input-nombre" name="nombre" type="text">
+                            <input class="input-nombre" name="usuarioNombre" type="text">
                             <div class="field-placeholder" id="name"><span>Enter your Name</span></div>
                         </div>
 
                         <div class="field-wrapper" id="apellido">
-                            <input class="input-apellido" name="apellido" type="text">
+                            <input class="input-apellido" name="usuarioApellido" type="text">
                             <div class="field-placeholder" id="lastName"><span>Enter your Last Name</span></div>
                         </div>
                     </section>
@@ -97,16 +99,16 @@
 
                     <section class="tarjetaFechas">
                         <div class="field-wrapper" id="input-fecha">
-                            <input class="input-expiracion" name="nombre" type="text">
+                            <input class="input-expiracion" name="tarjetaExpiracion" type="text">
                             <div class="field-placeholder" id="fechExpiracion"><span>Expiration Date MM/YY</span></div>
                         </div>
 
                         <div class="field-wrapper" id="input-cod">
-                            <input class="input-codigo" name="apellido" type="text">
+                            <input class="input-codigo" name="codigoTrajeta" type="text">
                             <div class="field-placeholder" id="cvc"><span>Enter CVC</span></div>
                         </div>
                     </section>
-                    
+
                 </section>
 
 
@@ -123,10 +125,19 @@
                     <img src="/imagenes/cart.png" alt="">
                 </div>
                 <h1 class="cart__titulo">YOUR CART</h1>
-                <div class="cart__cartMenu-lista">
+                <div class="cart__cartMenu-lista" id="cartLista-checkout">
 
 
                 </div>
+
+                <section class="cart__total">
+                    <h1>Total</h1>
+                    <div>
+                        <p>$</p>
+                        <p class="cart__valorTotal"></p>
+                    </div>
+
+                </section>
             </div>
 
         </div>

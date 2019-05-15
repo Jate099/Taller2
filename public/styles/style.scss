@@ -1091,10 +1091,11 @@ body, html{
 
 .cart{
     position: fixed;
+    padding: 1%;
     z-index: 2;
     width: 300px;
     height: 100%;
-    background-color: black;
+    background-color: #EDEFED;
     right: -300px;
     transition: all 0.4s;
     //display: none;
@@ -1117,6 +1118,12 @@ body, html{
         color: white;
     }
 
+    /*&__header{
+        width: 100%;
+        height: 50px;
+        background-color: black;
+    }*/
+
     &__btnContainer{
         right: 340px;
     }
@@ -1131,36 +1138,165 @@ body, html{
     }
 
     &__cerrar{
-        color: rgba(100, 100, 100, 0.3);;
+        //align: right;
+        background: none;
+        border: none;
+        color: gray;
     }
 
     &__titulo{
+        padding: 0 10%;
         color: #D33C7A;
     }
 
     &__cartMenu-lista{
         display: flex;
         margin: 0;
-        padding: 10px 10px;
         flex-direction: column;
         color: white;
         list-style: none;
     }
 
-    /*&__item{
+    &__item{
         display: flex;
-        margin: 0;
-        padding: 15px 10px;
-        flex-direction: column;
-        color: white;
-        list-style: none;
-        border-bottom: 1px solid  rgba(100, 100, 100, 0.3);
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding: 2%;
+        border: solid;
+        border-width: 2px;
+        border-color: #D32A6F;
+        border-radius: 5px;
     }
 
-    &__links{
+    &__img{
+        width: 30%;
+        height: auto;
+        margin-right: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__contInfo{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+    }
+
+    &__contBtns{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__contBtns button{
+        margin: 5px;
+    }
+
+    &__nombre, &__cantidad{
+        font-size: 15px;
+        color: black;
+    }
+
+    &__precio{
+        color: #37AB4A;
+        font-size: 15px;
+    }
+
+    &__nombre, &__precio, &__cantidad{
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    &__btn-eliminar{
+        width: 20px;
+        height: 20px;
+        border: none;
         color: white;
-        text-decoration: none;
-    }*/
+        font-size: 20;
+        border-radius: 100px;
+        background-color: #D32A6F;
+    }
+
+    &__btnCheck{
+        font-size: 20px;
+        color: white;
+        background-color: #37AB4A;
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+    }
+
+    &__btnCheck:hover{
+        color: #37AB4A;
+        border: solid #37AB4A;
+        border-width: 1px;
+        background-color: white;
+    }
+
+    &__total{
+        //float: right;
+        padding: 0 10%;
+        margin-bottom: 25px;
+    }
+
+    &__total h1{
+        margin: 0;
+        color: black;
+    }
+
+    &__total div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__total p{
+        font-size: 20px;
+        margin: 0;
+    }
+
+    //----totalCategoria------
+
+    &__totalCat{
+        margin-bottom: 25px;
+    }
+
+    &__totalCat h1{
+        margin: 0;
+        color: black;
+    }
+
+    &__totalCat div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__totalCat p{
+        font-size: 20px;
+        margin: 0;
+    }
+
+    //----totalProducto------
+    &__totalProd{
+        margin-bottom: 25px;
+    }
+
+    &__totalProd h1{
+        margin: 0;
+        color: black;
+    }
+
+    &__totalProd div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__totalProd p{
+        font-size: 20px;
+        margin: 0;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1769,6 +1905,10 @@ body, html{
         flex-direction: row;
         padding: 0 8%;
 
+        .form{
+            width: 60%;
+        }
+
         &__user-info{
             width: 60%;
             display: flex;
@@ -1913,6 +2053,27 @@ body, html{
 
     .cart-checkout{
         width: 40%;
+        //padding: 0 2%;
+        background: white;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #D32A6F;
+        border-radius: 10px;
+
+        #cartLista-checkout{
+            padding: 0 8%;
+        }
+
+        #cartvalorTotal-checkout{
+            padding: 0 8%;
+        }
+
+    }
+
+    #cartItem-checkout{
+        border-width: 2px;
+        border-color: #D32A6F;
+        border-radius: 10px;
     }
 }
 

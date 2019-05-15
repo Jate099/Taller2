@@ -40,7 +40,9 @@ function cargarPag() {
 
             var contItem = document.createElement('div');
             var imgNuevo = document.createElement('div');
-            var nombreNuevo = document.createElement('p');
+            var contenedorInfo = document.createElement('div');
+            var contenedorBtn = document.createElement('div');
+            var nombreNuevo = document.createElement('h1');
             var precioNuevo = document.createElement('p');
             var btnNuevo = document.createElement('button');
             var eliminarProd = document.createElement('button');
@@ -49,17 +51,24 @@ function cargarPag() {
             if (listaCarrito != null) {
                 listaCarrito.appendChild(contItem);
                 contItem.appendChild(imgNuevo);
-                contItem.appendChild(nombreNuevo);
-                contItem.appendChild(btnNuevo);
-                contItem.appendChild(precioNuevo);
-                contItem.appendChild(eliminarProd);
-                contItem.appendChild(cantNuevo);
+                contItem.appendChild(contenedorInfo);
+                contItem.appendChild(contenedorBtn);
+                contenedorInfo.appendChild(nombreNuevo);
+                contenedorBtn.appendChild(btnNuevo);
+                contenedorInfo.appendChild(precioNuevo);
+                contenedorBtn.appendChild(eliminarProd);
+                contenedorInfo.appendChild(cantNuevo);
             }
 
             contItem.className = 'cart__item';
+            contItem.id = 'cartItem-checkout';
             imgNuevo.className = 'cart__img';
+            contenedorInfo.className = 'cart__contInfo';
+            contenedorBtn.className = 'cart__contBtns';
             nombreNuevo.className = 'cart__nombre';
+            nombreNuevo.id = 'cartNombre-check';
             precioNuevo.className = 'cart__precio';
+            precioNuevo.id = 'cartPrecio-check';
             eliminarProd.className = 'cart__btn-eliminar';
             cantNuevo.className = 'cart__cantidad';
             btnNuevo.className = 'cart__agregCantidad';
@@ -67,7 +76,7 @@ function cargarPag() {
             imgNuevo.style.backgroundImage = 'url(' + producto.imagen + ')';
             nombreNuevo.innerHTML = producto.nombre;
             precioNuevo.innerHTML = producto.precio;
-            eliminarProd.innerHTML = 'eliminar';
+            eliminarProd.innerHTML = 'x';
             cantNuevo.innerHTML = "" + cantidad;
             btnNuevo.innerHTML = '+';
             //btnNuevo2.innerHTML = '-';
