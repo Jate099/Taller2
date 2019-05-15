@@ -1394,11 +1394,58 @@ body, html{
         &__contenedor{
             display: flex;
             flex-direction: row;
-            padding: 15px;
+            align-items: center;
+            padding: 1% 8%;
+
+            @media (max-width: 365px){
+                flex-direction: column;
+            }
+        }
+
+        &__contenedor label{
+             margin-right: 1%;
+
+             @media (max-width: 375px){
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
         }
 
         &__titulo{
             margin-right: 50px;
+
+            @media (max-width: 375px){
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__btnTam{
+            font-size: 15px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            background: none;
+            width: auto;
+            height: 25px;
+            border: solid black;
+            border-width: 1px;
+        }
+
+        &__btnTam:hover{
+            color: white;
+            background-color: black;
+        }
+
+        &__contBtns{
+            flex-wrap: wrap;
+        }
+
+        .input-rango{
+            margin-right: 5%;
+
+            @media (max-width: 375px){
+                margin-bottom: 20px;
+            }
         }
     }
 

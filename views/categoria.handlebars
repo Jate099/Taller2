@@ -105,20 +105,28 @@
         <div class="filtros">
             <div class="filtros__contenedor">
                 {{#if esHeadwear}}
-                <p class="filtros__titulo">Filter</p>
+                <p class="filtros__titulo">Filter By:</p>
 
-                <div class="filtros__dropdown">
-                    <button class="filtros__dropbtn">Dropdown</button>
-                    <div class="filtros__dropdown-content">
-                        <a class="dropdownPrice" href="/tienda/headwear?precio=39.99"><button>39.99</button></a>
-                        <a class="dropdownPrice" href="/tienda/headwear?precio=34.99"><button>34.99</button></a>
-                        <a class="dropdownPrice" href="/tienda/headwear?precio=29.99"><button>29.99</button></a>
-                        <a class="dropdownPrice" href="/tienda/headwear?precio=24.99"><button>24.99</button></a>
+                <label for="">Price:</label>
+                <input value="{{precio}}" class="input-rango" type="range" min="24.99" max="39.99">
 
-                    </div>
+                {{/if}}
+
+                {{#if esSweaters}}
+                <p class="filtros__titulo">Filter By:</p>
+
+                <label for="">Price:</label>
+                <input value="{{precio}}" class="input-rango" type="range" min="24.99" max="39.99">
+
+                <label for="">Size:</label>
+                <div class="filtros__contBtns">
+                    <a href="/tienda/sweaters?tamano=s"><button class="filtros__btnTam">S</button></a>
+                    <a href="/tienda/sweaters?tamano=m"><button class="filtros__btnTam">M</button></a>
+                    <a href="/tienda/sweaters?tamano=l"><button class="filtros__btnTam">L</button></a>
+                    <a href="/tienda/sweaters?tamano=xl"><button class="filtros__btnTam">XL</button></a>
+                    <a href="/tienda/sweaters?tamano=xxl"><button class="filtros__btnTam">XXL</button></a>
                 </div>
 
-                <input value="{{precio}}" class="input-rango" type="range" min="24.99" max="39.99">
 
                 {{/if}}
             </div>

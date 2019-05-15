@@ -72,6 +72,14 @@ app.get('/tienda/:categoria?', function (request, response) {
     query.precio = { $lte: parseFloat(request.query.precio) };
   }
 
+  if (request.query.genero) {
+    query.genero = request.query.genero;
+  }
+
+  if (request.query.tamano) {
+    query.tamano = request.query.tamano;
+  }
+
   var productos = db.collection('productos');
 
   productos.find(query).toArray(function (err, docs) {
@@ -81,6 +89,8 @@ app.get('/tienda/:categoria?', function (request, response) {
       productos: docs,
       categoria: request.params.categoria,
       precio: request.query.precio,
+      genero: request.query.genero,
+      tamano: request.query.tamano,
       esHeadwear: request.params.categoria == "headwear",
       esSweaters: request.params.categoria == "sweaters",
       esJewelry: request.params.categoria == "jewelry",

@@ -167,7 +167,7 @@
         "precio": 74.99,
         "descripcion": "The Icon Suede Cap is a Premium cap that embodies the desire of free spirits to escape reality through Music. The Tomorrowland Icon Logo embroidery with suede flat visor makes this cap stand out from the crowd, while the fully adjustable black plastic snapback ensures a perfect fit.",
         "categoria": "sweaters",
-        "genero": ["male", "female"],
+        "genero": "male",
         "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
         "colores": ["blue"]
 
